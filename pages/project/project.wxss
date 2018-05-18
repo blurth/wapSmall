@@ -1,0 +1,40 @@
+
+
+/* 项目列表 */
+
+.xm-main {
+  width: 100%;
+  background: #fff;
+  margin: 25rpx 0px;
+  overflow: hidden;
+}
+
+.xm_list {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 36rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.xm_list_bw {
+  width: 25%;
+  margin-bottom: 26rpx;
+}
+
+.xm_list_bw image {
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+  margin: 0 auto;
+}
+
+.xm_list_bw text {
+  display: block;
+  font-size: 28rpx;
+  color: #151515;
+  text-align: center;
+  margin-top: 22rpx;
+}

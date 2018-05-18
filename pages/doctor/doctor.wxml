@@ -1,0 +1,32 @@
+
+<view class="container">
+
+  <view class='doc-list-top'>
+
+
+    <view class='tabs-box' wx:if="{{containerShow}}">
+      <view class="tabs-item {{currenttabsIndex== -1 ? 'selected' : ''}}" bindtap='onTabsItemTapAll' data-index='{{-1}}'>
+        <text>全部</text>
+      </view>
+      <block wx:for="{{docCategory}}">
+        <view class="tabs-item {{currenttabsIndex==index ? 'selected' : ''}}" bindtap='onTabsItemTap' data-index='{{index}}' data-id='{{item.id}}'>
+          <text>{{item.cate_name}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+
+  <view class='tabs-detail' wx:if="{{containerShow}}">
+    <template is="arclist" data="{{docList:docList}}"></template>
+    <view>
+      <loading wx:if="{{loading}}">加载中</loading>
+    </view>
+  </view>
+
+  <view class='search-panel' wx:if="{{searchPanelShow}}">
+    <template is="arclist" data="{{docList:docList}}"></template>
+  </view>
+
+
+</view>

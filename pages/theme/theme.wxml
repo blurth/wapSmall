@@ -1,0 +1,17 @@
+
+<view class="container theme-container" hidden="{{!loadingHidden}}">
+        <block wx:for="{{themeInfo}}">
+                      
+            <view class="product-detail-imgs">
+                
+                    <image src="{{item.img.url}}" mode="widthFix"></image>
+                
+            </view>
+
+            
+        </block>
+   
+</view>
+<loading hidden="{{loadingHidden}}">
+    加载中...
+</loading>

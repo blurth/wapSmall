@@ -1,0 +1,15 @@
+<view class="container cart-container">
+
+        <view class="special-box">
+
+            <view class="special-imgs">
+                <block wx:for = "{{specialyArr}}">
+                 <view bindtap="onSpecialClick" data-id='{{item.id}}' data-title='{{item.name}}'><image src="{{item.top_img.url}}" mode="widthFix"></image></view>
+  
+                </block>
+
+            </view>
+          
+       </view>  
+
+</view>

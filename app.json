@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/theme/theme",
+    "pages/category/category",
+    "pages/diary/diary",
+    "pages/project/project",
+    "pages/special/special",
+    "pages/detail/detail",
+    "pages/special/huodong/huodong",
+    "pages/product/product",
+    "pages/doctor/doctor",
+    "pages/my/my",
+    "pages/sence/sence"
+  ],
+  "window": {
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "#FFFFFF",
+    "navigationBarBackgroundColor": "#935d99",
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "imgs/toolbar/home.png",
+        "selectedIconPath": "imgs/toolbar/home@selected.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "imgs/toolbar/category.png",
+        "selectedIconPath": "imgs/toolbar/category@selected.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/product/product",
+        "iconPath": "imgs/toolbar/cart.png",
+        "selectedIconPath": "imgs/toolbar/cart@selected.png",
+        "text": "美购"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "imgs/toolbar/my.png",
+        "selectedIconPath": "imgs/toolbar/my.png",
+        "text": "我的"
+      }
+    ],
+    "backgroundColor": "#F5F5F5",
+    "selectedColor": "#AB956D",
+    "color": "#989898",
+    "borderStyle": "white",
+    "position": "bottom"
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "debug": true
+}

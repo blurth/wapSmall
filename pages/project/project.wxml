@@ -1,0 +1,14 @@
+<view class='xm-main'>
+
+
+    <view class='xm_list'>
+    <block wx:for="{{ProAttr}}" wx:key="userInfoListId">
+    
+      <view class='xm_list_bw' bindtap='OnXmTap' data-id='{{item.id}}' data-name='{{item.name}}' >
+        <image src='{{item.img.url}}'></image>
+        <text>{{item.name}}</text>
+      </view>
+
+</block> 
+    </view>
+  </view>

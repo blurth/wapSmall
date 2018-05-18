@@ -1,0 +1,83 @@
+.products-box{
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+.products-item{
+  min-height:560rpx;
+  width: 98%;
+  border-top: 1rpx solid #efefef;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  background-color: #F5F6F5;
+  justify-content:center;
+  position: relative;
+  margin-left:20rpx;
+  margin-right:20rpx;
+}
+
+.eye_img{
+  width:40rpx;
+  height: 25rpx;
+}
+.products-image{
+  
+  width:340rpx;
+  float: left;
+  
+  height: 340rpx;
+  border-radius: 10rpx;
+}
+
+.products-image2{
+ 
+  width:340rpx;
+  float: right;
+  
+  height: 340rpx;
+  border-radius: 10rpx;
+}
+
+.products-item-bottom{
+ 
+  margin-bottom:20rpx;
+  color: #333;
+}
+.products-item-bottom .name{
+  float: left;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.bottom_text{
+ 
+  font-size: 30rpx;
+  color: #9f9f9f;
+  margin-top: 20rpx;
+}
+.bottom_text view{
+  float: left;
+}
+.project{
+  margin-right: 20rpx;
+}
+.price{
+  margin-top: 8rpx;
+}
+
+.lab-l{
+ position: absolute;
+ left: 0;
+ top: 300rpx; 
+ width: 120rpx;
+ color: white;
+}
+.lab-r{
+width: 120rpx;
+ color: white;
+ position: absolute;
+ right: 210rpx;
+ top: 300rpx;
+
+}

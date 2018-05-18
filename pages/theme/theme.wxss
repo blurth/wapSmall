@@ -1,0 +1,11 @@
+@import "../tpls/base.wxss";
+
+.product-detail-imgs{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.product-detail-imgs image{
+  width: 100%;
+}
+

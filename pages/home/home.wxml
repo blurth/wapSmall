@@ -1,0 +1,44 @@
+<import src="../tpls/products/products-tpl.wxml"/>
+<view class="container home-container" hidden="{{!loadingHidden}}">
+    <swiper indicator-dots="true" autoplay="true" class="swiper">
+        <block wx:for="{{bannerArr}}">
+            <swiper-item class="banner-item" bindtap="onBannerItemTap" data-id="{{item.key_word}}">
+                <image class="item-image" src="{{item.img.url}}" mode="aspectFill" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="home-main">
+        <!--主题精选-->
+        <view class="home-main-theme">
+            <view class="home-main-header">—YUEHUAPLASTIC—</view>
+            <view class="theme-box">
+                <block wx:for="{{themeArr}}" >     
+<view wx:if="{{item.id !=3}}" class="theme-item" bindtap="onThemeAItemTap" data-id="{{item.id}}" data-name="{{item.name}}">
+      <image src="{{item.topic_img.url}}"></image>
+      </view>
+<button wx:else class="theme-item fen-q" open-type="contact" session-from="weapp">
+      <image src="{{item.topic_img.url}}"></image>
+      </button>
+             
+</block>
+            </view>
+        </view>
+        <!--案例展示-->
+
+        <block wx:for="{{videoArr}}">
+              <view class='case-item'>
+              <video style="width: 750rpx;height=400px;margin:1px;" src="{{item.src}}" initial-time="1" binderror="videoErrorCallback"></video>
+              </view>     
+        </block>
+
+    <view class="home-main-products">
+        <view class="home-main-header">案例分享</view>
+      <template is="products" data="{{diaryArr:diaryArr}}"/>
+
+    </view>
+        
+    </view>
+</view>
+<loading hidden="{{loadingHidden}}">
+    加载中...
+</loading>

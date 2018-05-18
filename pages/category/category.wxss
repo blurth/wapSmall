@@ -1,0 +1,106 @@
+/* tabs切换 */
+@import "../tpls/products/products-tpl.wxss";
+.case-tabs {
+  width: 100%;
+  padding: 35rpx 0rpx 30rpx;
+  background: #fff;
+}
+
+.scroll-tabs {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  white-space: nowrap;
+}
+
+.case-tab-item {
+  width: 185rpx;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+  margin-right: 22rpx;
+}
+
+.case-tab-item:last-child{
+  margin-right: 0rpx;
+}
+
+.case-tab-item image {
+  width: 185rpx;
+  height: 110rpx;
+}
+
+.case-tab-item text {
+  font-size: 28rpx;
+  color: #000;
+  margin-top: 10rpx;
+}
+
+.case-tab-item.selected text {
+  color: #e02323;
+}
+
+.case-tabs-detail {
+  width: 100%;
+  margin-top: 25rpx;
+  padding-top: 20rpx;
+  background: #fff;
+}
+
+.case-tabs-list {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.case-list-detail {
+  width: 50%;
+  margin-bottom: 48rpx;
+}
+
+.yxxm-img {
+  display: block;
+  width: 345rpx;
+  height: 330rpx;
+  margin: 0 auto;
+  margin-bottom: 27rpx;
+}
+
+.case-appt {
+  display: block;
+  width: 210rpx;
+  height: 55rpx;
+  margin:0 auto;
+}
+/* 搜索框 */
+.search-wrapper {position: fixed;left: 0;top: 0;width: 100%;height: 100rpx;z-index: 99;}
+.search {margin: 20rpx 28rpx;height: 60rpx;line-height: 60rpx;font-size: 12px;color: #555;padding: 0 12px;background: rgba(255, 255, 255, .6);border-radius: 20px;}
+.icon-search{font-size: 14px;padding-right: 3px;}
+
+
+/* 轮播图 */
+.swiper-container {position: relative;}
+.swiper-container swiper {height: 380rpx;} 
+.slide-image {width: 100%;height: 100%;}
+.ratio-wrapper {position: absolute;left: 0;width: 100%;top: 310rpx;height: 50rpx;overflow: hidden;}
+.ratio {margin: 0 -180rpx;height: 180rpx;border-radius: 100%;background: #fff;}
+
+
+/* 轮播图进度条 */
+.indicator-wrapper {position: absolute;left: 0;width: 100%;bottom: 10rpx;height: 4px;text-align: center;}
+.indicator-wrapper text{display: inline-block;margin: 0 2px;width: 40rpx;height: 4rpx;background: #fff;vertical-align: top;}
+.indicator-wrapper .dotfocus {background: #f8a52d;}
+
+.home-main-header{
+  display: flex;
+  height: 60rpx;
+  color: #AB956D;
+  background-color: #fff;
+  font-size: 32rpx;
+  align-items: center;
+  justify-content: center;
+  margin: 20rpx 0;
+}

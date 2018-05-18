@@ -1,0 +1,22 @@
+/**
+ * Created by Blurth on 17 Oct 16th.
+ */
+import {Base} from '../../utils/base.js';
+
+class Theme extends Base{
+    constructor(){
+        super();
+    }
+
+    getThemesData(id,callback){
+        var param={
+            url: 'theme/'+id,
+            sCallback:function(data){
+                callback && callback(data);
+            }
+        };
+        this.request(param);
+    }
+};
+
+export {Theme};

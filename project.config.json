@@ -1,0 +1,121 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": false,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.1",
+	"appid": "wx5e2f50789ec88882",
+	"projectname": "dfgdf",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "dd",
+					"pathName": "pages/cart/cart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "dd",
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sdfsd",
+					"pathName": "pages/diary/diary",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "专题",
+					"pathName": "pages/special/special",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/category/category",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "项目",
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "啦啦",
+					"pathName": "pages/project/project",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "项目一览",
+					"pathName": "pages/project/project",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "xiangmu",
+					"pathName": "pages/project/project",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "因生说",
+					"pathName": "pages/doctor/doctor",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "dfgfd",
+					"pathName": "pages/theme/theme?id=4",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sdf",
+					"pathName": "pages/theme/theme\"?id=4\"",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sdf",
+					"pathName": "pages/theme/theme?ids=4",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sdf",
+					"pathName": "pages/theme/theme",
+					"query": "ids=4"
+				}
+			]
+		}
+	}
+}

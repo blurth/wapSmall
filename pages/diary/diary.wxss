@@ -1,0 +1,37 @@
+@import "../tpls/base.wxss";
+
+image{
+  height:100%;
+  width:100%;
+
+}
+.product-detail-box{
+   height:1000rpx;
+width:100%;
+}
+.product-detail-imgs{
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+}
+.kefu{
+  height:150rpx;
+  width:150rpx;
+  padding: 0;
+  border: 0px;
+  text-align: justify;
+  position: fixed;
+  z-index: 999;
+  right: 1rpx;
+  top: 680rpx;
+  background-color:transparent;
+}
+.kefu::after{
+border:0; 
+}
+.kefu image{
+  height:150rpx;
+  width:150rpx;
+ position: absolute;
+}
+

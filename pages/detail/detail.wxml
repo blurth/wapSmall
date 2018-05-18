@@ -1,0 +1,15 @@
+
+<view class="container theme-container">
+
+        <block wx:for="{{detailArr}}">
+                      
+            <view class="product-detail-imgs">
+                
+                    <image src="{{item.img_url.url}}" mode="widthFix"></image>
+                
+            </view>
+
+            
+        </block>
+   
+</view>

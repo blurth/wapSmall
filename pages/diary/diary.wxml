@@ -1,0 +1,30 @@
+<view class="container cart-container">
+<view class='header'>
+
+
+
+
+  
+
+
+</view>
+ <button class="kefu" open-type="contact" session-from="weapp">
+               <image src="../../imgs/icon/donghua.gif"></image>
+         </button>
+
+        <view class="product-detail-box">
+
+        <block wx:for="{{diaryArr}}">
+
+      
+            <view class="product-detail-imgs">
+                
+                    <image src="{{item.img_url.url}}" mode="widthFix"></image>
+                
+            </view>
+
+            </block>
+       </view>  
+
+      
+</view>
