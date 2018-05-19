@@ -11,7 +11,8 @@
     "pages/product/product",
     "pages/doctor/doctor",
     "pages/my/my",
-    "pages/sence/sence"
+    "pages/sence/sence",
+    "pages/home/video/video"
   ],
   "window": {
     "navigationBarTitleText": "",

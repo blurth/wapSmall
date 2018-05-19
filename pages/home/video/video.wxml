@@ -1,0 +1,5 @@
+<block wx:for="{{videov}}" >  
+   <view><image src='item.src'></image></view>
+
+
+</block>

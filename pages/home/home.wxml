@@ -25,11 +25,11 @@
         </view>
         <!--案例展示-->
 
-        <block wx:for="{{videoArr}}">
-              <view class='case-item'>
-              <video style="width: 750rpx;height=400px;margin:1px;" src="{{item.src}}" initial-time="1" binderror="videoErrorCallback"></video>
+      
+              <view class='case-item' bindtap=''>
+             <image src='{{videoArr}}' mode='aspectFill'></image>
               </view>     
-        </block>
+    
 
     <view class="home-main-products">
         <view class="home-main-header">案例分享</view>

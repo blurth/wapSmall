@@ -34,7 +34,8 @@ Page({
         });
         home.getVideoData((data) =>{
              that.setData({
-               videoArr:data
+               videoArr:data[0].main_img_url,
+               videov:data
              });
              callback&&callback();
         });

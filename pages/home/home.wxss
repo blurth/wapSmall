@@ -89,3 +89,6 @@
   border:0; 
 }
 
+.case-item image{
+  width: 110%;
+}
