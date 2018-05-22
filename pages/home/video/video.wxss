@@ -1,1 +1,6 @@
 /* pages/home/video/video.wxss */
+video{
+  width:750rpx;
+height:430rpx;
+
+}

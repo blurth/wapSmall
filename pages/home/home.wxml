@@ -26,7 +26,7 @@
         <!--案例展示-->
 
       
-              <view class='case-item' bindtap=''>
+              <view class='case-item' bindtap='oonThemeAItemTap'>
              <image src='{{videoArr}}' mode='aspectFill'></image>
               </view>     
     

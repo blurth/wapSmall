@@ -78,11 +78,8 @@
 
 .fen-q{
   padding: 0;
-   background-color: #fff;
+  background-color: #fff;
   border: 0px;
-
-
-
 }
 
 .fen-q::after{
@@ -90,5 +87,5 @@
 }
 
 .case-item image{
-  width: 110%;
+  width: 100%;
 }

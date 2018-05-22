@@ -21,8 +21,15 @@ Page({
     var that = this;
 
     special.getDetail((data) => {
-      that.setData({
-        specialyArr: data,
+     
+      for (var i = 0; i < data.length; i++){
+        data[i].create_time = data[i].create_time.substr(5, 6);
+        }
+
+
+       that.setData({
+       specialyArr: data,
+  
       });
     });
 

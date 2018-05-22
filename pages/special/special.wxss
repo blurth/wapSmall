@@ -1,7 +1,42 @@
 @import "../tpls/base.wxss";
 
 
-.special-imgs image{
-   width: 750rpx;
-   height: 100%;
+
+
+.special-box>view{
+   border-bottom: 2rpx solid rgba(255, 233, 222, 0.5);
+   height: 220rpx;
+   padding: 15rpx;
+}
+.special-box{
+  width: 100%;
+  height: 100%;
+}
+.content_l{
+  float: left;
+  width: 250rpx;
+ height: 100%;
+ margin-right: 20rpx;
+ 
+}
+.content_l>image{
+  width: 250rpx;
+ height: 220rpx;
+
+}
+
+.content_r{
+  float: left;
+  width: 430rpx;
+height: 100%;
+position: relative;
+}
+.content_r text{
+ font-size: 40rpx;
+}
+
+.content_r>view{
+  position: absolute;
+  bottom: 5rpx;
+  right: 5rpx;
 }

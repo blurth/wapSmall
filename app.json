@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/start/start",
     "pages/home/home",
     "pages/theme/theme",
     "pages/category/category",
@@ -12,7 +13,8 @@
     "pages/doctor/doctor",
     "pages/my/my",
     "pages/sence/sence",
-    "pages/home/video/video"
+    "pages/home/video/video",
+    "pages/authorize/index"
   ],
   "window": {
     "navigationBarTitleText": "",

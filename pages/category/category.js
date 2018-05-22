@@ -1,13 +1,13 @@
 import { Category } from 'category-model.js';
 
-var category=new Category();  //实例化
+var category = new Category();  //实例化
 
 Page({
   data: {
-    id:2,
+    id: 2,
     pageindex: 1,
-    currenttabsIndex:0,
-    loadingHidden:false,
+    currenttabsIndex: 0,
+    loadingHidden: false,
     swiper: {
       autoplay: true,
       interval: 4000,
@@ -20,7 +20,7 @@ Page({
   },
 
   /*加载所有数据*/
-  _loadData:function(callback){
+  _loadData: function (callback) {
 
     var that = this;
     //获取banner
@@ -31,7 +31,7 @@ Page({
     });
 
     //获取所有分类list
-    category.getCategoryType((categoryData)=>{
+    category.getCategoryType((categoryData) => {
       that.setData({
         categoryTypeArr: categoryData,
         loadingHidden: true
@@ -40,14 +40,14 @@ Page({
     });
 
     //获取: 全部案例
-     this._loadCasesAll();
+    this._loadCasesAll();
   },
 
 
   //获取: 全部案例
   _loadCasesAll: function () {
     category.getCasesListData((data) => {
-      
+
       this.setData({
         diaryArr: data
       })
@@ -64,19 +64,19 @@ Page({
 
     var id = category.getDataSet(event, 'id');
 
-    
+
     category.getDiariesByCategory(id, (data) => {
       this.data.id = id;
-     this.setData({
-       diaryArr: data
-     })
+      this.setData({
+        diaryArr: data
+      })
     });
   },
 
 
-  getProductsByCategory:function(id,callback){
-    category.getProductsByCategory(id,(data)=> {
-      callback&&callback(data);
+  getProductsByCategory: function (id, callback) {
+    category.getProductsByCategory(id, (data) => {
+      callback && callback(data);
     });
   },
 
@@ -97,8 +97,8 @@ Page({
   },
 
   /*下拉刷新页面*/
-  onPullDownRefresh: function(){
-    this._loadData(()=>{
+  onPullDownRefresh: function () {
+    this._loadData(() => {
       wx.stopPullDownRefresh()
     });
   },
@@ -107,22 +107,22 @@ Page({
  */
   onReachBottom: function () {
     var id = this.data.id;
-    
+
     var cont = this.data.pageindex;
 
-var that = this;
-    category.getCategoryMore(id, cont,(Data) => {
+    var that = this;
+    category.getCategoryMore(id, cont, (Data) => {
 
-      if(Data){
+      if (Data) {
         this.data.pageindex++;
         that.setData({
           diaryArr: Data
         })
       }
-    
+
 
     });
-      
+
   },
 
   //分享效果

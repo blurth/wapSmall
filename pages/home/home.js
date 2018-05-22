@@ -34,8 +34,8 @@ Page({
         });
         home.getVideoData((data) =>{
              that.setData({
-               videoArr:data[0].main_img_url,
-               videov:data
+               videoArr:data[0].main_img_url
+     
              });
              callback&&callback();
         });
@@ -99,6 +99,11 @@ Page({
       
     },
 
+    oonThemeAItemTap:function(){
+      wx.navigateTo({
+        url: 'video/video'
+      })
+    },
     onPullDownRefresh: function(){
         this._loadData(()=>{
             wx.stopPullDownRefresh()
