@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 18,
 			"list": [
 				{
 					"id": -1,
@@ -132,6 +132,17 @@
 					"name": "dddd",
 					"pathName": "pages/special/special",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "美购",
+					"pathName": "pages/meigou/meigou",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "MY",
+					"pathName": "pages/my/my"
 				}
 			]
 		}

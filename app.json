@@ -14,7 +14,8 @@
     "pages/my/my",
     "pages/sence/sence",
     "pages/home/video/video",
-    "pages/authorize/index"
+    "pages/authorize/index",
+    "pages/meigou/meigou"
   ],
   "window": {
     "navigationBarTitleText": "",
@@ -34,12 +35,12 @@
       },
       {
         "pagePath": "pages/category/category",
-        "iconPath": "imgs/toolbar/category.png",
-        "selectedIconPath": "imgs/toolbar/category@selected.png",
-        "text": "分类"
+        "iconPath": "imgs/toolbar/case.png",
+        "selectedIconPath": "imgs/toolbar/case@selected.png",
+        "text": "案列"
       },
       {
-        "pagePath": "pages/product/product",
+        "pagePath": "pages/meigou/meigou",
         "iconPath": "imgs/toolbar/cart.png",
         "selectedIconPath": "imgs/toolbar/cart@selected.png",
         "text": "美购"
@@ -47,12 +48,12 @@
       {
         "pagePath": "pages/my/my",
         "iconPath": "imgs/toolbar/my.png",
-        "selectedIconPath": "imgs/toolbar/my.png",
+        "selectedIconPath": "imgs/toolbar/my@selected.png",
         "text": "我的"
       }
     ],
     "backgroundColor": "#F5F5F5",
-    "selectedColor": "#AB956D",
+    "selectedColor": "#935d99",
     "color": "#989898",
     "borderStyle": "white",
     "position": "bottom"

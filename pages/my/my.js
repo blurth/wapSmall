@@ -1,66 +1,51 @@
-// pages/my/my.js
+//import { Address } from '../../utils/address.js';
+//import { Order } from '../order/order-model.js';
+import { My } from '../my/my-model.js';
+
+// var address = new Address();
+// var order = new Order();
+var my = new My();
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    pageIndex: 1,
+    isLoadedAll: false,
+    loadingHidden: false,
+    orderArr: [],
+    addressInfo: null
+  },
+  onLoad: function () {
+    this._loadData();
+    //this._getAddressInfo();
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
-  
+    //更新订单,相当自动下拉刷新,只有  非第一次打开 “我的”页面，且有新的订单时 才调用。
+    // var newOrderFlag = order.hasNewOrder();
+    // if (this.data.loadingHidden && newOrderFlag) {
+    //   this.onPullDownRefresh();
+    // }
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
+  _loadData: function () {
+    let that = this
+    let userInfo = wx.getStorageSync('userInfo')
+    if (!userInfo) {
+      wx.navigateTo({
+        url: "/pages/authorize/index"
+      })
+    } else {
+      that.setData({
+        userInfo: userInfo
+      })
+    }
+
+    // this._getOrders();
+    // order.execSetStorageSync(false);  //更新标志位
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
   
-  },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

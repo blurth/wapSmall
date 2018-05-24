@@ -1,2 +1,77 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+
+<view class="container my-container">
+  <view class="my-header">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <text class="name">{{userInfo.nickName}}</text>
+  </view>
+
+
+    <view class='my-menu-nav my-counts'>
+    <view class='nav-ele my-all' bindtap='OnTapOrder' data-index='{{0}}'>
+      <image src='/imgs/my/my-all.png' class='icon-all'></image>
+      <text>全部</text>
+    </view>
+    <view class='nav-ele my-no-pay' bindtap='OnTapOrder' data-index='{{1}}'>
+      <image src='/imgs/my/my-no-pay.png' class='icon-no-pay'></image>
+      <text>待支付</text>
+    </view>
+    <view class='nav-ele my-have-pay' bindtap='OnTapOrder' data-index='{{2}}'>
+      <image src='/imgs/my/my-have-pay.png' class='icon-have-pay'></image>
+      <text>已支付</text>
+    </view>
+    <view class='nav-ele my-Refund' bindtap='OnTapOrder' data-index='{{3}}'>
+      <image src='/imgs/my/my-Refund.png' class='icon-Refund'></image>
+      <text>退款订单</text>
+    </view>
+  </view>
+
+  <!--列表开始  -->
+  <view class='my-content'>
+
+  <view class="item-title" ontap="editAddress">
+     <view class='left-k'><image src="../../imgs/my/my-cart.png"></image></view>          
+      <view class='ziti'>
+        购物车
+        <image class='right-k' src="../../imgs/icon/arrow@right.png"></image></view>
+      </view>
+
+        <view class="item-title" ontap="editAddress">
+     <view class='left-k'><image src="../../imgs/my/my-yh.png"></image></view>          
+      <view class='ziti'>
+        优惠券
+        <image class='right-k' src="../../imgs/icon/arrow@right.png"></image></view>
+      </view>
+
+
+  <view class="item-title" ontap="editAddress">
+     <view class='left-k'><image src="../../imgs/my/my-address.png"></image></view>          
+      <view class='ziti'>
+        地址管理
+        <image class='right-k' src="../../imgs/icon/arrow@right.png"></image></view>
+      </view>
+
+        <view class="item-title" ontap="editAddress">
+     <view class='left-k'><image src="../../imgs/my/my-pl.png"></image></view>          
+      <view class='ziti'>
+        优惠活动
+        <image class='right-k' src="../../imgs/icon/arrow@right.png"></image></view>
+      </view>
+
+
+
+
+  </view>
+
+  
+
+
+
+
+  
+
+</view>
+
+<!-- 
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading> -->
