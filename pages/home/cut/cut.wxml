@@ -1,0 +1,88 @@
+
+<view class="container my-container" hidden="{{!loadingHidden}}">
+  <view class="my-header">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <text class="name">{{userInfo.nickName}}</text>
+    <text class="describe">我发现一件好货，来帮我砍刀最低价吧~</text>
+    <view class='content'>
+
+
+     <image src="{{goodsArr.top_img}}"></image>
+
+
+    <view class='cloum-c'>
+      
+<view class="g_name"><text class="g_name">{{goodsArr.name}}</text></view>
+      <view class='shu-c'>
+      <text class="f_price">{{goodsArr.f_price}}￥</text>
+    <text class="price">{{goodsArr.price}}￥</text>
+    </view>
+     
+
+    
+    </view>
+    </view>
+
+    <text class="now-price" wx:if="{{isSelfCut.is_self_kj==1}}">当前价{{isSelfCut.goods_now_money}}元,已经砍了{{goodsArr.price-isSelfCut.goods_now_money}}元</text>
+    <text class="now-price" wx:else>当前价{{goodsArr.price}}元,已经砍了0元</text>
+
+
+    <view class='cut-my'>
+
+
+      <view class='self_cut' bindtap='selfCut' data-id="{{data.id.id}}" wx:if="{{isSelfCut.is_self_kj!==1}}">自己先砍一刀</view>
+
+
+      <view class='self_cut' bindtap='buy' data-id="{{isSelfCut.id}}" wx:else>以当前价购买</view>
+
+
+        <button wx:if="{{isSelfCut.is_self_kj!==1}}">邀请好友砍价</button>
+
+
+
+<button wx:else open-type="share" data-self="{{isSelfCut.id}}">邀请好友砍价</button>
+
+
+
+    </view>
+      
+      </view>
+
+
+
+
+    <view class='cut-list'>
+    <text wx:if="{{helpList.length}}">{{helpList.length}}名好友帮砍</text>
+    <text wx:else>快去邀请好友一起来砍</text>
+
+    <block wx:for="{{helpList}}">
+         <view class='list'>
+          <image class='sbsb' style='width:132rpx;' src="{{item.avatar_url}}"></image>
+              <view class='cloum-two'>
+              <text class="n_name">{{item.nickname}}</text>
+              <text class="time">{{item.create_time}}</text>
+              </view>
+            
+
+          <view class='cut-done'><image src='../../../imgs/fu.png'></image>
+          <text>砍掉{{item.goods_kj_money}}元</text>
+          </view>
+
+          </view>
+
+        <view class='border-b'></view>
+  </block>
+
+  </view>
+
+
+
+</view>
+
+
+
+
+ 
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading> 

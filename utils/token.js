@@ -12,12 +12,20 @@ class Token {
 
     verify() {
         var token = wx.getStorageSync('token');
-        if (!token) {
+        
+
+          if (!token) {
+
+
             this.getTokenFromServer();
-        }
-        else {
+          }
+          else {
             this._veirfyFromServer(token);
-        } 
+          } 
+        
+
+
+
     }
 
     _veirfyFromServer(token) {
@@ -38,14 +46,18 @@ class Token {
     }
 
     getTokenFromServer(callBack) {
+
+
         var that  = this;
         wx.login({
             success: function (res) {
+              
                 wx.request({
-                    url: that.tokenUrl,
+                  url: that.tokenUrl,
                     method:'POST',
                     data:{
                         code:res.code
+                        
                     },
                     success:function(res){
                         wx.setStorageSync('token', res.data.token);

@@ -43,9 +43,6 @@
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  
-
-  
 }
 /* .theme-item:first-child{
   border-right:4rpx solid #fff;
@@ -88,4 +85,68 @@
 
 .case-item image{
   width: 100%;
+}
+
+.case-item{
+  width: 750rpx;
+  height:600rpx;
+  border-bottom: 20rpx solid #f2f2f2;
+  border-top: 20rpx solid #f2f2f2;
+  overflow: hidden;
+}
+.ca-top{
+  height: 100rpx;
+  position: relative;
+  text-align: center;
+}
+.ca-top text{
+  line-height: 100rpx;
+}
+.ca-top image{
+  position:absolute;
+  width:37rpx;
+  height:37rpx;
+  top:34%;
+  right:250rpx;
+}
+
+.cell{
+  float:left;
+  width:373rpx;
+  height:250rpx;
+}
+.cell image{
+  height: 200rpx;
+}
+.cell-img{
+  position: relative;
+}
+.cell-text{
+  position: absolute;
+  top: 3rpx;
+  left: 10rpx;
+  color: #8d8d8d;
+  font-size: 30rpx;
+}
+.describe{
+  height: 50rpx;
+  margin-left: 5rpx;
+}
+.no1{
+    border-top: 1rpx solid #f2f2f2;
+    border-right: 0.5rpx solid #f2f2f2;
+    border-bottom: 0.5rpx solid #f2f2f2;
+}
+.no2{
+    border-top: 1rpx solid #f2f2f2;
+    border-left: 0.5rpx solid #f2f2f2;
+    border-bottom: 0.5rpx solid #f2f2f2;
+}
+.no3{
+    border-right: 0.5rpx solid #f2f2f2;
+    border-top: 0.5rpx solid #f2f2f2;
+}
+.no4{
+    border-left: 0.5rpx solid #f2f2f2;
+    border-top: 0.5rpx solid #f2f2f2;
 }

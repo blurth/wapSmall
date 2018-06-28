@@ -8,9 +8,10 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.1",
-	"appid": "wx5e2f50789ec88882",
+	"libVersion": "1.9.94",
+	"appid": "wxe0155e2914a4ad6c",
 	"projectname": "dfgdf",
+	"isGameTourist": false,
 	"condition": {
 		"search": {
 			"current": -1,
@@ -28,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 18,
+			"current": 26,
 			"list": [
 				{
 					"id": -1,
@@ -142,7 +143,56 @@
 				{
 					"id": -1,
 					"name": "MY",
-					"pathName": "pages/my/my"
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "conte",
+					"pathName": "pages/special/special",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "conted",
+					"pathName": "pages/doctor/doctor",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "同声翻译",
+					"pathName": "pages/translate/translate",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/home/home",
+					"query": ""
+				},
+				{
+					"id": 25,
+					"name": "帮砍",
+					"pathName": "pages/home/hcut/hcut",
+					"query": "self_id=76&goods_id=1"
+				},
+				{
+					"id": -1,
+					"name": "自己砍",
+					"pathName": "pages/home/cut/cut",
+					"query": "id=1"
 				}
 			]
 		}

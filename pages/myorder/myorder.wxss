@@ -1,0 +1,120 @@
+/* 顶部分类 */
+
+.order-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 90rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.nav-item {
+  width: 25%;
+  text-align: center;
+}
+
+.nav-item text {
+  display: inline-block;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 25rpx;
+  color: #876a3d;
+}
+
+.nav-item.selected text {
+  border-bottom: 1px solid #ff6b00;
+}
+
+/* 订单 */
+
+order-container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  background: red;
+  margin: 0 auto;
+}
+
+.order-item {
+  width: 710rpx;
+  height: 270rpx;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  background: #fff;
+  border-radius: 8rpx;
+}
+
+.order-main {
+  width: 94%;
+  margin: 0 auto;
+}
+
+.order-top, .order-middle, .order-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.order-top {
+  height: 76rpx;
+  line-height: 76rpx;
+  border-bottom: 2px solid #f3f3f3;
+}
+
+.order-time {
+  font-size: 21rpx;
+  color: #9a9a9a;
+}
+
+.order-mention {
+  font-size: 24rpx;
+  color: #ff313a;
+}
+
+.order-middle {
+  margin-top: 22rpx;
+}
+
+.order-title {
+  width: 450rpx;
+  font-size: 25rpx;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.order-status {
+  font-size: 25rpx;
+  color: #9a9a9a;
+}
+
+.order-bottom {
+  margin-top: 10rpx;
+}
+
+.order-detail {
+  display: flex;
+  flex-direction: column;
+  font-size: 25rpx;
+  color: #9a9a9a;
+  line-height: 38rpx;
+}
+
+.order-detail text {
+  color: #ff313a;
+}
+
+.order-pay-button {
+  width: 158rpx;
+  height: 59rpx;
+  line-height: 59rpx;
+  text-align: center;
+  font-size: 25rpx;
+  color: #fff;
+  background: #ff6d00;
+  border-radius: 9rpx;
+}

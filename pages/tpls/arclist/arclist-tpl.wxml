@@ -1,0 +1,50 @@
+<template name="arclist">
+  <block wx:if="{{docList.length>0}}">
+    <block wx:for="{{docList}}">
+      <view class='arclist-detail'>
+        <view class='yestar-brand-container'>
+          <view class='yestar-brand'>
+            <image src='/images/yestar-circle.png' class='circle-icon'></image>
+            <view class='yestar-right'>
+              <view class='yesar-top'>
+                <text class='yestar-say'><text class='bold'>悦华医师大咖</text> 他们的目标始终一致助您达成所愿，悦享生活...</text>
+                <view class='yestar-tel' bindtap='callPhone'>
+                  <image src='/imgs/yueh.png' class='tel-icon'></image>
+                  <text>拨打电话</text>
+                </view>
+              </view>
+              <view class='yestar-address' bindtap='jumpMap'>
+                <image src='/images/yestar-mark.png' class='mark-icon'></image>
+                <text>西安市莲湖区西关正街晨光御苑14F</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='doc-card-zj' bindtap='docDatail' data-id='{{item.id}}' wx:if="{{item.thumb.length>0}}">
+          <image src='{{item.thumb}}'></image>
+        </view>
+        <view class='doc-card-about'>
+          <view class='doc-card-btt'>
+            <view class='doc-btt doc-btt-left'>
+              <image src='/images/doc-card-eye.png' class='card-eye'></image>
+              <text><text class='doc-red'>{{item.click_count}}</text>人浏览</text>
+            </view>
+            <view class='doc-btt doc-btt-middle' bindtap='onLike' data-id='{{item.id}}'>
+              <image wx:if="{{item.isLike == 1}}" src='/images/doc-card-dz@on.png' class='card-dz'></image>
+              <image wx:else src='/images/doc-card-dz.png' class='card-dz'></image>
+              <text><text class='doc-red'>{{item.likeCount}}</text>人点赞</text>
+            </view>
+            <view class='doc-btt doc-btt-right'  data-id='{{item.id}}' bindtap='docDatail'>
+              <image src='/images/doc-card-detail.png' class='card-detail'></image>
+              <text>查看详情</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+  <view wx:else class='no-data'>
+    <image src='/imgs/no-data.png'></image>
+    <text>暂无数据</text>
+  </view>
+</template>

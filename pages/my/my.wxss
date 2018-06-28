@@ -1,10 +1,10 @@
 @import "../tpls/base.wxss";
-
+ 
 .my-container{
     background-color:#EDEDED;
 }
 .my-header{
-    background-color: #935d99;
+    background-color: #69C3AA;
     color: #fff;
     display: flex;
     align-items: center;

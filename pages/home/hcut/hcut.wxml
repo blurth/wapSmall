@@ -1,0 +1,74 @@
+
+<view class="container my-container">
+  <view class="my-header">
+    <image src="{{selfCut.avatar_url}}"></image>
+    <text class="name">{{selfCut.nickname}}</text>
+    <text class="describe">我发现一件好货，来帮我砍刀最低价吧~</text>
+    <view class='content'>
+
+     <image src="{{goodsArr.top_img}}"></image>
+
+    <view class='cloum-c'>
+      
+<view class="g_name"><text class="g_name">{{goodsArr.name}}</text></view>
+      <view class='shu-c'>
+      <text class="f_price">底价{{goodsArr.f_price}}￥</text>
+    <text class="price">原价{{goodsArr.price}}￥</text>
+    </view>
+     
+
+    
+    </view>
+    </view>
+
+    <text wx:if="{{helpArr}}" class="now-price">{{message}}</text>
+
+
+    <text class="now-price" wx:else>当前价{{selfCut.goods_now_money}}元,已经砍了{{goodsArr.price-selfCut.goods_now_money}}元</text>
+
+
+
+    <view class='cut-my'>
+      <view class='self_cut' bindtap='helpCut' wx:if="{{!reCut}}">帮好友砍一刀</view>
+      <view class='self_cut' wx:else>已经帮好友砍{{reCut.goods_kj_money}}元</view>
+
+
+        <button bindtap='onHome'>我也要砍价</button>
+
+        
+    </view>
+      
+      </view>
+
+    <view class='cut-list'>
+          <text>{{helpList.length-1}}名好友帮砍</text>
+    <block wx:for="{{helpList}}">
+         <view class='list'>
+          <image class='sbsb' style='width:132rpx;' src="{{item.avatar_url}}"></image>
+              <view class='cloum-two'>
+              <text class="n_name">{{item.nickname}}</text>
+              <text class="time">{{item.create_time}}</text>
+              </view>
+            
+
+          <view class='cut-done'><image src='../../../imgs/fu.png'></image>
+          <text>砍掉{{item.goods_kj_money}}元</text>
+          </view>
+
+          </view>
+
+        <view class='border-b'></view>
+  </block>
+  </view>
+
+
+
+</view>
+
+
+
+
+<!-- 
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading> -->

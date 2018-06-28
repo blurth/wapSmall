@@ -9,3 +9,23 @@
   background-color: #fff;
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", ΢���ź�, STHeiti, ����ϸ��, sans-serif;
 }
+
+/* 暂无数据 */
+.no-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 400rpx;
+}
+
+.no-data image {
+  width: 86rpx;
+  height: 89rpx;
+  margin-bottom: 40rpx;
+}
+
+.no-data text {
+  font-size: 26rpx;
+  color: #ccc;
+}

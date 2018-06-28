@@ -128,7 +128,7 @@ Page({
   //分享效果
   onShareAppMessage: function () {
     return {
-      title: '西安悦华',
+      title: '西安悦华医疗美容',
       path: 'pages/category/category'
     }
   }

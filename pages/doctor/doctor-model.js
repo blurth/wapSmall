@@ -4,21 +4,11 @@ class Doctor extends Base {
     super();
   }
 
-  //获取分类: 全部分类
-  getDoctorCategoryData(callback) {
-    var parmas = {
-      url: 'article/catelist',
-      sCallback: function (data) {
-        callback && callback(data)
-      }
-    }
-    this.request(parmas);
-  }
 
   //获取列表信息: 全部专家
   getDoctorListData(nextUrl, callback) {
     var parmas = {
-      url: 'article/list?start=' + nextUrl + "&count=8",
+      url: 'doctor/list',
       sCallback: function (data) {
         callback && callback(data)
       }

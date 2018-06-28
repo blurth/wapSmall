@@ -1,0 +1,149 @@
+@import "../../tpls/base.wxss";
+
+.my-container{
+    background-color:#EDEDED;
+}
+
+.my-header{
+    background-color:#69C3AA;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    padding:30rpx;
+    font-size:28rpx;
+    flex-direction:column;
+}
+.my-header>image{
+    height: 132rpx;
+    width: 132rpx;
+    border-radius: 100rpx;
+    align-self:center;
+}
+.my-header>text{
+    margin-top:11px;
+}
+.content{
+  display:flex;
+  background-color:#f5ede0;
+  width:80%;
+  height:200rpx;
+  border:2px solid #f5ede0;
+  border-radius:10rpx;
+}
+.content >image{
+  width: 30%;
+   height:180rpx;
+  align-self:center;
+}
+.g_name{
+ color:#000;
+margin-left:1em;
+height:100rpx;
+font-size:35rpx;
+}
+.f_price{
+color: red;
+}
+.price{
+  text-decoration:line-through;
+color: green;
+margin-left:0.5rem;
+
+}
+
+.cloum-c{
+  flex-direction:column;
+  width:70%
+    
+}
+
+.shu-c{
+margin-left:1em;
+flex-direction:column;
+height:100rpx;
+}
+.shu-c >text{
+font-size:30rpx;
+line-height:150rpx;
+}
+.cut-my{
+display:flex;
+height:80rpx;
+margin-top:1em;
+}
+.self_cut{
+height:75rpx;
+align-self:center;
+border:2px solid #f5ede0;
+border-radius:10rpx;
+font-size: 35rpx;
+padding:0 14rpx 0 14rpx;
+margin-right: 1em;
+background-color: #afa490;
+line-height: 75rpx;
+}
+.cut-list{
+  flex-direction:column;
+display: flex;
+  width: 100%;
+  background-color: #fff;
+}
+
+.cut-list>text{
+  text-align:center;
+}
+.list{
+  display: flex;
+  height: 150rpx;
+  align-items:center;
+  width:750rpx;
+}
+.sbsb{
+   height:132rpx;
+  border-radius:100rpx;
+  align-self:center;
+  margin-left:5rpx;
+
+}
+.cut-done text{
+  color: #cbbda2;
+  align-self: center;
+}
+.cloum-two{
+  flex-direction:column;
+  display:flex;
+  margin-left:10rpx;
+  width:280rpx;
+}
+
+.cut-done{
+ display: flex;
+ flex-direction:row;
+ width:300rpx;
+ margin-left:5px;
+}
+.cut-done>image{
+
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.border-b{
+  align-self:center;
+  height: 2rpx;
+  border-bottom: 1rpx dashed #eaebe3;
+  width: 80%;
+ }
+
+ .n_name{
+   height: 70rpx;
+   line-height:80rpx;
+   font-size: 30rpx;
+ }
+
+ .time{
+  font-size: 25rpx;
+   height: 70rpx;
+   line-height:80rpx;
+   color: #a4a4a4;
+ }

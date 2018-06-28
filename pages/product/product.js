@@ -15,6 +15,14 @@ Page({
         cartTotalCounts:0,
     },
     onLoad: function (option) {
+      let that = this
+      let userInfo = wx.getStorageSync('userInfo')
+      if (!userInfo) {
+        wx.navigateTo({
+          url: "/pages/authorize/index"
+        })
+      } 
+
         var id = option.id;
         this.data.id=id;
         this._loadData();
@@ -66,7 +74,7 @@ Page({
                 tempObj[key]=this.data.product[key];
             }
         }
-
+console.log(tempObj);
         cart.add(tempObj,this.data.productCounts);
     },
 
@@ -102,8 +110,8 @@ Page({
 
     /*跳转到购物车*/
     onCartTap:function(){
-        wx.switchTab({
-            url: '/pages/cart/cart'
+        wx.navigateTo({
+          url: '/pages/cart/cart',
         });
     },
 
@@ -117,7 +125,7 @@ Page({
     //分享效果
     onShareAppMessage: function () {
         return {
-            title: '零食商贩 Pretty Vendor',
+          title: '西安悦华医疗美容',
             path: 'pages/product/product?id=' + this.data.id
         }
     }

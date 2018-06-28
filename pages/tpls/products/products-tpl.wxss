@@ -16,10 +16,18 @@
   margin-left:20rpx;
   margin-right:20rpx;
 }
-
+.price text{
+  line-height:30rpx; 
+}
 .eye_img{
   width:40rpx;
-  height: 25rpx;
+  height:32rpx;
+  float:left;
+
+}
+
+.case-top{
+  height: 340rpx;
 }
 .products-image{
   
@@ -40,7 +48,7 @@
 }
 
 .products-item-bottom{
- 
+  height:220rpx;
   margin-bottom:20rpx;
   color: #333;
 }
@@ -51,19 +59,26 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .bottom_text{
- 
+  height:100rpx;
   font-size: 30rpx;
   color: #9f9f9f;
   margin-top: 20rpx;
 }
 .bottom_text view{
   float: left;
+  margin-left:10rpx;
+  height:50rpx;
 }
 .project{
   margin-right: 20rpx;
 }
 .price{
+  
   margin-top: 8rpx;
+}
+.five{
+  font-size:30rpx;
+
 }
 
 .lab-l{

@@ -17,8 +17,6 @@ Page({
             });
         });
 
-        
-
         home.getThemeData((data) => {
             that.setData({
                 themeArr: data,
@@ -32,13 +30,22 @@ Page({
             });
             callback&&callback();
         });
-        home.getVideoData((data) =>{
-             that.setData({
-               videoArr:data[0].main_img_url
+        // home.getVideoData((data) =>{
+        //      that.setData({
+        //        videoArr:data[0].main_img_url
      
-             });
-             callback&&callback();
+        //      });
+        //      callback&&callback();
+        // });
+
+
+      home.allCut((data) => {
+        that.setData({
+          cutArr: data
         });
+        callback && callback();
+      });
+
     },
     onBannerItemTap: function (event){
       var id = home.getDataSet(event, 'id');
@@ -91,6 +98,11 @@ Page({
           wx.navigateTo({
             url: '../doctor/doctor'
           })
+        } else if (id == 8) {
+
+          wx.navigateTo({
+            url: '../translate/translate'
+          })
         }else{
           wx.navigateTo({
             url: '../theme/theme?id=' + id + '&name=' + name
@@ -104,11 +116,19 @@ Page({
         url: 'video/video'
       })
     },
+    onGoodsItemTap: function (event) {
+      var id = home.getDataSet(event,'id');
+      wx.navigateTo({
+        url: 'goods/goods?id='+id,
+      })
+    },
+
     onPullDownRefresh: function(){
         this._loadData(()=>{
             wx.stopPullDownRefresh()
         });
     },
+   
 
     onShareAppMessage: function () {
         return {

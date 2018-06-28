@@ -48,6 +48,16 @@ class Home extends Base{
       };
       this.request(param);
     }
+
+    allCut(callback) {
+      var param = {
+        url: 'goods/all',
+        sCallback: function (data) {
+          callback && callback(data);
+        }
+      };
+      this.request(param);
+    }
 };
 
 export {Home};

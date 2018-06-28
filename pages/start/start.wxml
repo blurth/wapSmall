@@ -16,7 +16,7 @@
         <view class="confirm-btn" bindtap='goToIndex'>
           <text >点击进入</text>
         </view>
-        <text class="copyright">@西安悦华</text>
+        <text class="copyright">@西关正街晨光御苑A座</text>
       </view>
     </view>
   </block>

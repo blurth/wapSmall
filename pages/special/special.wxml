@@ -12,14 +12,8 @@
 
             </view>
                  
-                 </view>
-  <view bindtap="onSpecialClick" data-id='{{item.id}}' data-title='{{item.name}}'>
-             <view class='content_l'><image src="{{item.top_img.url}}" mode="aspectFill"></image></view>
-            <view class='content_r'>
-              <text>{{item.describe}}</text>
-              <view>{{item.create_time}}</view>
-
-            </view>
+                
+ 
                  
                  </view>
   

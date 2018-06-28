@@ -11,19 +11,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    article: '<div style="text-align:center;">《静夜思》· 李白<br />床前明月光，<br />疑是地上霜。 <br />举头望明月， <br />低头思故乡。<br /><img src="http://www.xiexingcun.com/Poetry/6/images/53e.jpg" alt="" /><br /><img src="http://www.xiexingcun.com/Poetry/6/images/53.jpg" alt="" /><br /><br />床前明月光，<br /><img src="http://www.xiexingcun.com/Poetry/6/images/53b.jpg" alt="" /><br /></div>',
+    article: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-this.data.titleName = options.name;
-this.data.id = options.id;
-wx.setNavigationBarTitle({
-  title: options.title
-});
-this._loadData();
+    this.data.titleName = options.name;
+    this.data.id = options.id;
+    wx.setNavigationBarTitle({
+      title: options.title
+    });
+    this._loadData();
   },
 
   /**
@@ -38,13 +38,16 @@ this._loadData();
     var that = this;
     /*获取单品列表信息*/
     huod.getHuodData(this.data.id, (data) => {
-      that.setData({
-        huodInfo: data.imgs,
-      });
+      
+      
+      that.data.article = data.content,
+      
       callback && callback();
+
+      var temp = WxParse.wxParse('article', 'html', that.data.article, that, 0);
     });
 
-    var temp = WxParse.wxParse('article', 'html', that.data.article, that, 5);
+    
 
 
   },

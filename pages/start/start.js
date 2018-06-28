@@ -13,9 +13,12 @@ Page({
     });
   },
   onLoad:function(){
+
+    var token = wx.getStorageSync('token');
+ 
     var that = this
     wx.setNavigationBarTitle({
-      title: "西安悦华"
+      title: ""
     })
   },
   onShow:function(){

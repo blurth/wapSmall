@@ -1,0 +1,55 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="container detail-container" hidden="{{!loadingHidden}}">
+    <view class="detail-header-box">
+       
+        <view class="detail-topic-img">
+               <swiper indicator-dots="true" autoplay="true" class="swiper">
+        <block wx:for="{{goodsArr.items}}">
+            <swiper-item class="banner-item">
+                <image class="item-image" src="{{item.img.url}}" mode="aspectFill" />
+            </swiper-item>
+        </block>
+    </swiper>
+        </view>
+
+
+           
+       
+        <view class="basic-info-box">
+            <view class="stock" wx:if="{{goodsArr.stock>0}}">有货</view>
+            <view class="stock no" wx:else>缺货</view>
+            <view class="name">{{goodsArr.name}}</view>
+            <view class="price">原价￥{{goodsArr.price}}</view>
+            <view class="f_price">底价￥{{goodsArr.f_price}}</view>
+        </view>
+    </view>
+    <view class="detail-bottom-box">
+        <view class="tabs-box">
+            <block wx:for="{{['商品详情' ,'活动须知','售后保障']}}">
+                <view class="tabs-item {{currentTabsIndex==index?'selected':''}}" bindtap="onTabsItemTap" data-index="{{index}}">
+                    {{item}}
+                </view>
+            </block>
+        </view>
+        <view class="product-detail-box">
+            <view class="product-detail-imgs" hidden="{{currentTabsIndex!=0}}">
+             
+
+               <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+            </view>
+            <view class="product-detail-properties" hidden="{{currentTabsIndex!=1}}">
+               {{goodsArr.properties.name}}
+            </view>
+            <view class="product-detail-protect" hidden="{{currentTabsIndex!=2}}">
+                <view>七天无理由免费退货</view>
+            </view>
+        </view>
+    </view>
+
+<view class='fix' bindtap='cutOpen' data-id="{{goodsArr.id}}" data-from="self" ><text>立即发起砍价，最低可砍到{{goodsArr.f_price}}元</text></view>
+
+</view>
+
+<loading hidden="{{loadingHidden}}">
+    加载中...
+</loading>

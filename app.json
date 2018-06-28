@@ -15,15 +15,30 @@
     "pages/sence/sence",
     "pages/home/video/video",
     "pages/authorize/index",
-    "pages/meigou/meigou"
+    "pages/meigou/meigou",
+    "pages/order/order",
+    "pages/pay-result/pay-result",
+    "pages/cart/cart",
+    "pages/myorder/myorder",
+    "pages/translate/translate",
+    "pages/edit/edit",
+    "pages/home/cut/cut",
+    "pages/home/goods/goods",
+    "pages/home/hcut/hcut"
   ],
   "window": {
     "navigationBarTitleText": "",
     "navigationBarTextStyle": "#FFFFFF",
-    "navigationBarBackgroundColor": "#935d99",
+    "navigationBarBackgroundColor": "#69C3AA",
     "backgroundColor": "#FFFFFF",
     "backgroundTextStyle": "dark",
     "enablePullDownRefresh": true
+  },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.0.6",
+      "provider": "wx069ba97219f66d99"
+    }
   },
   "tabBar": {
     "list": [

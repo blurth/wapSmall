@@ -52,7 +52,7 @@ page{
     box-sizing: border-box;
 }
 .save-btn{
-    background-color: #e64340;
+    background-color: #69C3AA;
     color:#fff;
 }
 button[type="default"]{
@@ -84,4 +84,8 @@ picker {
 }
 .hui{
     color: #777;
+}
+
+.content image{
+  width: 750rpx;
 }

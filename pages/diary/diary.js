@@ -1,16 +1,21 @@
+var WxParse = require('../wxParse/wxParse.js');
+
 import { Diary } from 'diary-model.js';
 var diary = new Diary(); //实例化 首页 对象
 Page({
 
   data: {
+    article: '',
     loadingHidden: false
   },
-  onLoad: function (option) {
-    var id = option.id;
-    this.data.id = id;
-    this._loadData();
+  onLoad: function (options) {
+    this.data.titleName = options.name;
+    this.data.id = options.id;
 
-    
+    wx.setNavigationBarTitle({
+      title: options.name
+    });
+    this._loadData();
   },
 
   /*加载所有数据*/
@@ -18,13 +23,21 @@ Page({
     
     var that = this;
     diary.getDetail(this.data.id, (data) => {
-      that.setData({
-        diaryArr: data.imgs
-      });
-      wx.setNavigationBarTitle({ title: data.name });
-      callback && callback();
+      
+      that.data.article = data.content,
+
+        callback && callback();
+
+      var temp = WxParse.wxParse('article', 'html', that.data.article, that, 0);
     });
   },
+
+  onShareAppMessage: function () {
+    return {
+      title: this.data.name,
+      path: 'pages/diary/diary' + this.data.id
+    }
+  }
 
 })
 

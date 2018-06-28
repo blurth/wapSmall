@@ -1,0 +1,160 @@
+.arclist-detail{
+  margin-bottom: 20rpx;
+}
+/* 中间品牌*/
+.yestar-brand-container {
+  width: 100%;
+  padding: 37rpx 0rpx 10rpx;
+  background: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+.yestar-brand {
+  width: 711rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.circle-icon {
+  width: 94rpx;
+  height: 94rpx;
+  margin-right: 28rpx;
+}
+
+.yestar-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.yesar-top {
+  display: flex;
+  flex-direction: row;
+}
+
+.yestar-say {
+  width: 390rpx;
+  line-height: 34rpx;
+  margin-right: 25rpx;
+  font-size: 24rpx;
+  color: #626262;
+}
+
+.yestar-say .bold {
+  font-weight: bold;
+  color: #0a0a0a;
+}
+
+.yestar-tel {
+  width: 180rpx;
+  height: 55rpx;
+  border-radius: 5rpx;
+  background: #ea9345;
+  font-size: 25rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 55rpx;
+}
+
+.tel-icon {
+  display: inline-block;
+  width: 29rpx;
+  height: 28rpx;
+  margin-right: 16rpx;
+  vertical-align: -5rpx;
+}
+
+.yestar-address text {
+  font-size: 24rpx;
+  color: #8f6c35;
+}
+
+.mark-icon {
+  width: 20rpx;
+  height: 26rpx;
+  margin-right: 8rpx;
+}
+
+/* tab选项卡内容 */
+
+.tabs-detail {
+  width: 100%;
+}
+
+.doc-card-zj {
+  width: 100%;
+  padding: 26rpx 0rpx 26rpx;
+  margin-bottom: 2rpx;
+  background: #fff;
+}
+
+.doc-card-zj image {
+  display: block;
+  width: 670rpx;
+  height: 350rpx;
+  margin: 0 auto;
+}
+
+.doc-card-about {
+  width: 100%;
+  padding: 20rpx 0rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.doc-card-about:last-child {
+  margin-bottom: 10rpx;
+}
+
+.doc-card-btt {
+  display: flex;
+  flex-direction: row;
+  width: 670rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 24rpx;
+  color: #161616;
+}
+
+.doc-btt {
+  width: 33.3%;
+}
+
+.doc-btt-middle {
+  border-left: 2px solid #f3f3f3;
+  border-right: 2px solid #f3f3f3;
+}
+
+.doc-red {
+  font-size: 26rpx;
+  color: #f5232a;
+}
+
+.card-eye {
+  width: 28rpx;
+  height: 21rpx;
+  margin-right: 9rpx;
+}
+
+.card-dz {
+  width: 24rpx;
+  height: 23rpx;
+  margin-right: 5rpx;
+}
+
+.card-detail {
+  width: 23rpx;
+  height: 24rpx;
+  margin-right: 5rpx;
+  vertical-align: -1rpx;
+}
+
+
+
+
+

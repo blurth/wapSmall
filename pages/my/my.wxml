@@ -28,14 +28,14 @@
   <!--列表开始  -->
   <view class='my-content'>
 
-  <view class="item-title" ontap="editAddress">
+  <view bindtap='onCartTap' class="item-title">
      <view class='left-k'><image src="../../imgs/my/my-cart.png"></image></view>          
       <view class='ziti'>
         购物车
         <image class='right-k' src="../../imgs/icon/arrow@right.png"></image></view>
       </view>
 
-        <view class="item-title" ontap="editAddress">
+        <view class="item-title" bindtap='onCoupons'>
      <view class='left-k'><image src="../../imgs/my/my-yh.png"></image></view>          
       <view class='ziti'>
         优惠券
@@ -50,10 +50,10 @@
         <image class='right-k' src="../../imgs/icon/arrow@right.png"></image></view>
       </view>
 
-        <view class="item-title" ontap="editAddress">
+        <view class="item-title" bindtap='onHuoTap'>
      <view class='left-k'><image src="../../imgs/my/my-pl.png"></image></view>          
       <view class='ziti'>
-        优惠活动
+        最新优惠
         <image class='right-k' src="../../imgs/icon/arrow@right.png"></image></view>
       </view>
 

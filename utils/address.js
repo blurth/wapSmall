@@ -13,7 +13,7 @@ class Address extends Base{
     getAddress(callback){
         var that=this;
         var param={
-          url: 'details',
+          url: 'address',
             sCallback:function(res){
                 if(res) {
                     res.totalDetail = that.setAddressInfo(res);
@@ -29,6 +29,9 @@ class Address extends Base{
         var formData={
                 name:res.userName,
                 mobile:res.telNumber,
+                province :res.provinceName || res.province,
+                city :res.cityName || res.city,
+                country :res.countyName || res.country,
                 detail:res.detailInfo
             };
         return formData;
@@ -38,7 +41,7 @@ class Address extends Base{
     submitAddress(data,callback){
         data = this._setUpAddress(data);
         var param={
-            url: 'address',
+          url: 'address',
             type:'post',
             data:data,
             sCallback:function(res){
@@ -68,7 +71,7 @@ class Address extends Base{
             detail =res.detailInfo || res.detail;
         var totalDetail=city+country+detail;
 
-        console.log(res);
+        
 
         //直辖市，取出省部分
         if(!this.isCenterCity(province)) {

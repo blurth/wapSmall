@@ -10,7 +10,6 @@ Page({
     currenttabsIndex: -1,
     containerShow: true,
     searchPanelShow: false,
-    placeholder: '请输入关键词查询',
     totalCount: 0,
     isEmpty: true,
     loading: false
@@ -21,18 +20,14 @@ Page({
   },
 
   _loadData() {
-    doctor.getDoctorCategoryData((res) => {  //获取: 全部分类
-      this.setData({
-        docCategory: res.data
-      })
-    })
+
 
     this._loadzjAll();
   },
 
   //获取列表信息: 全部专家
   _loadzjAll: function () {
-    doctor.getDoctorListData(0, (res) => {
+    doctor.getDoctorListData((res) => {
       this.setData({
         docList: res.data
       })

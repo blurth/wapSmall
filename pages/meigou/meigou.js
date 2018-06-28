@@ -100,7 +100,7 @@ Page({
   //分享效果
   onShareAppMessage: function () {
     return {
-      title: '零食商贩 Pretty Vendor',
+      title: '西安悦华医疗美容',
       path: 'pages/category/category'
     }
   }

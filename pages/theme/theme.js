@@ -33,7 +33,7 @@ Page({
     //分享效果
     onShareAppMessage: function () {
         return {
-            title: 'this.data.titleName',
+            title: this.data.titleName,
             path: 'pages/theme/theme?id=' + this.data.id
         }
     }

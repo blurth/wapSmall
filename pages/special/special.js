@@ -59,15 +59,10 @@ Page({
   onSpecialClick: function (event){
     var id = special.getDataSet(event, 'id');
     var title = special.getDataSet(event,'title')
-    if(id == 1){
-wx.navigateTo({
-  url: 'huodong/huodong?id=' + id + '&title=' + title,
-})
-    }else{
-      wx.navigateTo({
-        url: 'huodong/huodong?id=' + id + '&title=' + title,
-      })
-    }
+ 
+    wx.navigateTo({
+      url: 'huodong/huodong?id=' + id + '&title=' + title,
+    }) 
 
   },
   /**
