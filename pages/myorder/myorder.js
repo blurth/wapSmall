@@ -10,7 +10,9 @@ Page({
   data: {
     orderNav: ['全部', '待支付', '已支付', '退款'],
     currenttabsIndex: 0,
-    index: ''
+    index: '',
+    showOrderDetailInfo:'showOrderDetailInfo',
+    cut:'cut'
   },
 
   /**

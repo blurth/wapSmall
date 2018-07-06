@@ -41,7 +41,7 @@
                {{goodsArr.properties.name}}
             </view>
             <view class="product-detail-protect" hidden="{{currentTabsIndex!=2}}">
-                <view>七天无理由免费退货</view>
+                <view>支持分期</view>
             </view>
         </view>
     </view>

@@ -211,7 +211,7 @@ Page({
         _oneMoresTimePay:function(){
             this._execPay(this.data.id);
         },
-
+ 
         /*
         *开始支付
         * params:

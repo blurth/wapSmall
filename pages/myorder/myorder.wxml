@@ -11,7 +11,7 @@
 
   <view class='order-container'>
     <block wx:for="{{myOrderList}}">
-      <view class='order-item' bindtap="showOrderDetailInfo" data-id="{{item.id}}">
+      <view class='order-item' bindtap="{{item.type==0?showOrderDetailInfo:cut}}" data-id="{{item.id}}">
         <view class='order-main'>
           <view class='order-top'>
             <view class='order-time'>下单时间：{{item.create_time}}</view>

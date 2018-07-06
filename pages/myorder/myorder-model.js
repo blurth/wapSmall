@@ -6,7 +6,7 @@ class MyOrder extends Base {
 
   getMyOrder(index, callback) {
     var params = {
-      'url': '/order/by_user?typeid=' + index,
+      'url': '/order/by_user?status=' + index,
       sCallback: function (data) {
         callback && callback(data)
       }

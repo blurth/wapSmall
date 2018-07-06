@@ -82,10 +82,45 @@ Page({
   buy: function (event) {
 
     var selfId = cut.getDataSet(event,'id');
+var that = this;
 
-    cut.cutBuy(this.data.goods_id, selfId, (data) => {
+    //支付分两步，第一步是生成订单号，然后根据订单号支付
+    cut.preOrder(selfId, (data) => {
+      //订单生成成功
+      if (data.pass) {
+        //更新订单状态
+        var id = data.order_id;
+       
+
+        //开始支付
+        that._execPay(id);
+      } else {
+        that._orderFail(data);  // 下单失败
+      }
+    });
     
-     console.log(data);
+     
+   
+  },
+
+
+
+
+  /*
+  *开始支付
+  * params:
+  * id - {int}订单id
+  */
+  _execPay: function (id) {
+
+    var that = this;
+    cut.execPay(id, (statusCode) => {
+      if (statusCode != 0) {
+        var flag = statusCode == 2;
+        wx.navigateTo({
+          url: '../../pay-result/pay-result?id=' + id + '&flag=' + flag + '&from=order'
+        });
+      }
     });
   },
 

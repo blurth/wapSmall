@@ -39,7 +39,7 @@
      <view>
 <view class='cell no1' data-id="{{item.id}}" bindtap='onGoodsItemTap'>
     <view class='describe'>{{item.name}}</view>
-    <view class='cell-img'><image src='https://rizhi.xayuehua.com/images/cut.jpg'></image>
+    <view class='cell-img'><image src='{{item.top_img}}'></image>
       <view class='cell-text'>{{item.f_price}}起</view>     
     </view>
         

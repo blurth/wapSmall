@@ -3,7 +3,7 @@ var WxParse = require('../../wxParse/wxParse.js');
 var detail = new Detail();
 Page({
   data: {
-    loadingHidden: true,
+    loadingHidden: false,
     hiddenSmallImg: true,
     countsArray: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     productCounts: 1,
@@ -29,14 +29,17 @@ Page({
     detail.getDetail(this.data.id, (data) => {
       that.data.article = data.content,
       that.setData({
-        goodsArr: data
+        goodsArr: data,
+        loadingHidden:true
       });
       
       wx.setNavigationBarTitle({ title: data.name });
       callback && callback();
       var temp = WxParse.wxParse('article', 'html', that.data.article, that, 0);
+      
     });
 
+    
 
   },
 /**

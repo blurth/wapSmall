@@ -64,13 +64,13 @@ flex-direction:column;
 height:100rpx;
 }
 .shu-c >text{
-font-size:30rpx;
+font-size:28rpx;
 line-height:150rpx;
 }
 .cut-my{
-display:flex;
-height:80rpx;
-margin-top:1em;
+  display:flex;
+  height:80rpx;
+  margin-top:1em;
 }
 .self_cut{
 height:75rpx;

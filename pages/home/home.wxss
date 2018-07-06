@@ -112,25 +112,31 @@
 
 .cell{
   float:left;
-  width:373rpx;
-  height:250rpx;
+width:373rpx;
+height:250rpx;
+position:relative;
+
 }
 .cell image{
-  height: 200rpx;
+  height:250rpx;
 }
 .cell-img{
   position: relative;
 }
 .cell-text{
-  position: absolute;
-  top: 3rpx;
-  left: 10rpx;
-  color: #8d8d8d;
-  font-size: 30rpx;
+  position:absolute;
+top:60rpx;
+left:10rpx;
+color:#8d8d8d;
+font-size:30rpx;
+
 }
 .describe{
-  height: 50rpx;
-  margin-left: 5rpx;
+  height:50rpx;
+margin-left:5rpx;
+position:absolute;
+z-index:999;
+
 }
 .no1{
     border-top: 1rpx solid #f2f2f2;
