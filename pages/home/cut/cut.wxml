@@ -23,6 +23,9 @@
     </view>
     </view>
 
+
+
+
     <text class="now-price" wx:if="{{isSelfCut.is_self_kj==1}}">当前价{{isSelfCut.goods_now_money}}元,已经砍了{{goodsArr.price-isSelfCut.goods_now_money}}元</text>
     <text class="now-price" wx:else>当前价{{goodsArr.price}}元,已经砍了0元</text>
 
@@ -30,12 +33,15 @@
     <view class='cut-my'>
 
 
+   <block wx:if="{{isSelfCut.shengyu_kj_num==0}}">
+    <view class='self_cut' bindtap='buy' data-id="{{isSelfCut.id}}">砍价成功立即购买</view></block>
+ <block wx:else>
       <view class='self_cut' bindtap='selfCut' data-id="{{data.id.id}}" wx:if="{{isSelfCut.is_self_kj!==1}}">自己先砍一刀</view>
 
 
       <view class='self_cut' bindtap='buy' data-id="{{isSelfCut.id}}" wx:else>以当前价购买</view>
 
-
+</block>
         <button wx:if="{{isSelfCut.is_self_kj!==1}}">邀请好友砍价</button>
 
 

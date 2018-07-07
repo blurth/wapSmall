@@ -15,7 +15,11 @@ Page({
                 wx.redirectTo({
                     url: '../order/order?from=order&id=' + this.data.id
                 });
-            }else{
+          } else if (this.data.from == 'cut') {
+            wx.redirectTo({
+              url: '../myorder/myorder'
+            });
+          }else{
                 //返回上一级
                 wx.navigateBack({
                     delta: 1

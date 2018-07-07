@@ -29,9 +29,13 @@
 
 
     <view class='cut-my'>
+     <block wx:if="{{selfCut.shengyu_kj_num==0}}">
+
+     <view class='self_cut'>已经砍到最低价了</view></block>
+ <block wx:else>
       <view class='self_cut' bindtap='helpCut' wx:if="{{!reCut}}">帮好友砍一刀</view>
       <view class='self_cut' wx:else>已经帮好友砍{{reCut.goods_kj_money}}元</view>
-
+</block>
 
         <button bindtap='onHome'>我也要砍价</button>
 

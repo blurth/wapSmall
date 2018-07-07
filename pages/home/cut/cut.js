@@ -118,7 +118,7 @@ var that = this;
       if (statusCode != 0) {
         var flag = statusCode == 2;
         wx.navigateTo({
-          url: '../../pay-result/pay-result?id=' + id + '&flag=' + flag + '&from=order'
+          url: '../../pay-result/pay-result?id=' + id + '&flag=' + flag + '&from=cut'
         });
       }
     });
