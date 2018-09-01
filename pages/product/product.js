@@ -1,5 +1,5 @@
 // var productObj = require('product-model.js');
-
+var WxParse = require('../wxParse/wxParse.js');
 import {Product} from 'product-model.js';
 import {Cart} from '../cart/cart-model.js';
 
@@ -32,13 +32,20 @@ Page({
     _loadData:function(callback){
         var that = this;
         product.getDetailInfo(this.data.id,(data)=>{
+
+          that.data.article = data.content,
             that.setData({
                 cartTotalCounts:cart.getCartTotalCounts().counts1,
                 product:data,
                 loadingHidden:true
             });
             callback&& callback();
+
+          var temp = WxParse.wxParse('article', 'html', that.data.article, that, 0); 
         });
+
+
+
     },
 
     //选择购买数目

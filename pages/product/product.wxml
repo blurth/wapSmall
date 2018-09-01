@@ -1,3 +1,4 @@
+<import src="../wxParse/wxParse.wxml"/>
 <view class="container detail-container" hidden="{{!loadingHidden}}">
     <view class="detail-header-box">
         <view class="fixed-btns-box" bindtap="onCartTap">
@@ -45,9 +46,9 @@
         </view>
         <view class="product-detail-box">
             <view class="product-detail-imgs" hidden="{{currentTabsIndex!=0}}">
-                <block wx:for="{{product.imgs}}">
-                    <image src="{{item.img_url.url}}" mode="aspectFill"></image>
-                </block>
+
+              <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+              
             </view>
             <view class="product-detail-properties" hidden="{{currentTabsIndex!=1}}">
                 <block wx:for="{{product.properties}}">
@@ -58,7 +59,7 @@
                 </block>
             </view>
             <view class="product-detail-protect" hidden="{{currentTabsIndex!=2}}">
-                <view>七天无理由免费退货</view>
+                <view>贴心一站式服务</view>
             </view>
         </view>
     </view>

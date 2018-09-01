@@ -135,7 +135,7 @@ var that = this;
     var goods_id = that.data.goods_id;
 
     return {
-      title: '兄台 给我来一刀',
+      title: '发现一件好货 快来跟我一起砍价吧',
       path: 'pages/home/hcut/hcut?self_id=' + self_id + '&goods_id=' + goods_id
     }
   }

@@ -49,17 +49,18 @@
         "text": "主页"
       },
       {
-        "pagePath": "pages/category/category",
-        "iconPath": "imgs/toolbar/case.png",
-        "selectedIconPath": "imgs/toolbar/case@selected.png",
-        "text": "案列"
-      },
-      {
         "pagePath": "pages/meigou/meigou",
         "iconPath": "imgs/toolbar/cart.png",
         "selectedIconPath": "imgs/toolbar/cart@selected.png",
         "text": "美购"
       },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "imgs/toolbar/case.png",
+        "selectedIconPath": "imgs/toolbar/case@selected.png",
+        "text": "案列"
+      },
+
       {
         "pagePath": "pages/my/my",
         "iconPath": "imgs/toolbar/my.png",

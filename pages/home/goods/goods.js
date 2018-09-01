@@ -35,7 +35,7 @@ Page({
       
       wx.setNavigationBarTitle({ title: data.name });
       callback && callback();
-      var temp = WxParse.wxParse('article', 'html', that.data.article, that, 0);
+      var temp = WxParse.wxParse('article', 'html', that.data.article, that, 0); 
       
     });
 

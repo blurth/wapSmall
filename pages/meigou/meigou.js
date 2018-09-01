@@ -2,7 +2,7 @@ import { Meigou } from 'meigou-model.js';
 var meigou = new Meigou();  //实例化 home 的推荐页面
 Page({
   data: {
-    transClassArr: ['tanslate0', 'tanslate1', 'tanslate2', 'tanslate3', 'tanslate4', 'tanslate5', 'tanslate6'],
+    transClassArr: ['tanslate0', 'tanslate1', 'tanslate2', 'tanslate3', 'tanslate4', 'tanslate5', 'tanslate6', 'tanslate7'],
     currentMenuIndex: 0,
     loadingHidden: false,
   },
@@ -61,7 +61,7 @@ Page({
 
   getDataObjForBind: function (index, data) {
     var obj = {},
-      arr = [0, 1, 2, 3, 4, 5, 6],
+      arr = [0, 1, 2, 3, 4, 5, 6, 7],
       baseData = this.data.categoryTypeArr[index];
     for (var item in arr) {
       if (item == arr[index]) {

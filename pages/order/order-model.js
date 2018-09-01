@@ -37,7 +37,7 @@ class Order extends Base{
     * */
     execPay(orderNumber,callback){
         var allParams = {
-          url: 'pay/pre_order?XDEBUG_SESSION_START=19060',
+          url: 'pay/pre_order',
             type:'post',
             data:{id:orderNumber},
             sCallback: function (data) {

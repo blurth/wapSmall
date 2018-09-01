@@ -1,3 +1,4 @@
+
 @import "../tpls/base.wxss";
 .detail-container {
   background-color:#F9F9F9

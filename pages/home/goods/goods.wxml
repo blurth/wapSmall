@@ -33,7 +33,7 @@
         </view>
         <view class="product-detail-box">
             <view class="product-detail-imgs" hidden="{{currentTabsIndex!=0}}">
-             
+              
 
                <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
             </view>

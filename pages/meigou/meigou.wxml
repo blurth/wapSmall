@@ -31,6 +31,9 @@
       <view class="foods-type-box">
           <template is="categorydetail" data="{{categoryInfo:categoryInfo6}}"/>
       </view>
+       <view class="foods-type-box">
+          <template is="categorydetail" data="{{categoryInfo:categoryInfo7}}"/>
+      </view>
       </view>
 
   </view>
