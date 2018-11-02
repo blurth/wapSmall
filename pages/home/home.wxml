@@ -30,12 +30,12 @@
       <!-- 砍价开始 -->
     <view class='case-item' bindtap='allCut'>
        <view class='ca-top'>
-         <text>全民砍价</text>
+         <text>全民拼团</text>
          <image src='../../imgs/righ.png'></image>
        </view>
 
 <view class='ca-bottom'>
- <block wx:for="{{cutArr}}" >     
+ <block wx:for="{{ptArr}}" >     
      <view>
 <view class='cell no1' data-id="{{item.id}}" bindtap='onGoodsItemTap'>
     <view class='describe'>{{item.name}}</view>
@@ -45,36 +45,11 @@
         
 </view>
 
-        <!-- <view class='cell no2' data-id="{{item.id}}" bindtap='onGoodsItemTap'>
-        <view class='describe'>将自然换入家中</view>
-    <view class='cell-img'><image src='https://rizhi.xayuehua.com/images/cut.jpg'></image>
-      <view class='cell-text'>39起</view>     
-    </view>
-         </view> -->
+
 
 </view>
          </block>
-      <!--  
-     
-   
-    <view>
-        <view class='cell no3'>
-        
-         <view class='describe'>将自然换入家中</view>
-    <view class='cell-img'><image src='https://rizhi.xayuehua.com/images/cut.jpg'></image>
-      <view class='cell-text'>39起</view>     
-    </view>
-         
-         </view>
-        <view class='cell no4'> 
-        <view class='describe'>将自然换入家中</view>
-    <view class='cell-img'><image src='https://rizhi.xayuehua.com/images/cut.jpg'></image>
-      <view class='cell-text'>39起</view>     
-    </view>
-        
-        </view>
-     
-     </view> -->
+      
 
 
 </view>
@@ -82,10 +57,38 @@
 
         
     </view>   
+    <!-- 砍价开始 -->
+ <view class="kanjia-container" wx:if="{{cutArr}}">
+        <view bindtap="tapSales" class="kanjia-title" data-id="{{item.linkUrl}}">
+            <text>全民砍价</text>
+            <image src="../../image/home_more.png"></image>
+        </view>
+        <view bindtap="onGoodsItemTap" class="kanjia-list" data-id="{{item.id}}" wx:for="{{cutArr}}" wx:key="{{id}}">
+            <view class="kanjia-list-image">
+                <image src="{{item.top_img}}"></image>
+            </view>
+            <view class="kanjia-list-info">
+                <view class="kanjia-list-info-title">{{item.name}}</view>
+                <view class="kanjia-list-info-info">{{item.descript}}</view>
+                <view class="kanjia-list-info-money">
+                    <view class="kanjia-list-info-money-a">
+                        <text class="a">Ұ{{item.f_price}}</text>
+                        <text class="b">底价</text>
+                    </view>
+                    <view class="kanjia-list-info-money-a">
+                        <text>Ұ{{item.price}}</text>
+                        <text>原价</text>
+                    </view>
+                    <view class="kanjia-list-info-money-a">
+                        <text>{{item.stock}}</text>
+                        <text>限量</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
     
-
-    
-
+<!-- 砍价结束 -->
     <view class="home-main-products">
         <view class="home-main-header">案例分享</view>
       <template is="products" data="{{diaryArr:diaryArr}}"/>

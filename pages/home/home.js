@@ -2,7 +2,8 @@ import { Home } from 'home-model.js';
 var home = new Home(); 
 Page({
     data: { 
-        loadingHidden: false
+        loadingHidden: false,
+      taokouling:'1234566'
     },
     onLoad: function () {
         this._loadData();
@@ -30,13 +31,12 @@ Page({
             });
             callback&&callback();
         });
-        // home.getVideoData((data) =>{
-        //      that.setData({
-        //        videoArr:data[0].main_img_url
-     
-        //      });
-        //      callback&&callback();
-        // });
+        home.getPtuanData((data) =>{
+            that.setData({
+              ptArr: data
+            });
+            callback&&callback();
+        });
 
 
       home.allCut((data) => {
@@ -116,12 +116,27 @@ Page({
         url: 'video/video'
       })
     },
-    onGoodsItemTap: function (event) {
+  onGoodsItemTap: function (event) {
       var id = home.getDataSet(event,'id');
       wx.navigateTo({
         url: 'goods/goods?id='+id,
       })
     },
+
+
+  // onGoodsItemTap:function(){
+  //   var that = this;
+  //    wx.setClipboardData({
+  //      data: that.data.taokouling,
+  //      success: function (res) {
+  //       console.log('successfuly')
+
+  //      }  
+  //   });
+
+
+
+  // },
 
     onPullDownRefresh: function(){
         this._loadData(()=>{

@@ -100,7 +100,7 @@ class Cut extends Base {
         if (timeStamp) { //可以支付
           wx.requestPayment({
             'timeStamp': timeStamp.toString(),
-            'nonceStr': data.nonceStr,
+            'nonceStr': data.nonceStr,   
             'package': data.package,
             'signType': data.signType,
             'paySign': data.paySign,

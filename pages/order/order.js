@@ -1,13 +1,15 @@
 import {Order} from '../order/order-model.js';
 import {Cart} from '../cart/cart-model.js';
 import {Address} from '../../utils/address.js';
-
+import {Detail} from '../../pages/home/goods/goods-model.js';
+var goods = new Detail();
 var order=new Order();
 var cart=new Cart();
 var address=new Address();
  
 Page({
         data: {
+            fromPtFlag:false,
             fromCartFlag:true,
             addressInfo:null
         },
@@ -16,12 +18,14 @@ Page({
         * 订单数据来源包括两个：
         * 1.购物车下单
         * 2.旧的订单
+        * 3.拼团的订单
         * */
         onLoad: function (options) {
 
             var flag=options.from=='cart',
                 that=this;
             this.data.fromCartFlag=flag;
+            var ptflag = options.from=='pt';
             this.data.account=options.account;
 
             //来自于购物车
@@ -42,6 +46,16 @@ Page({
                 address.getAddress((res)=> {
                     that._bindAddressInfo(res);
                 });
+            }else if(ptflag){
+               
+               
+                this.setData({
+                    Ptaddress:false,
+                    addressInfo:true,
+                    productsArr: goods.getPtDataFromLocal(true),
+                    account:options.account,
+                    orderStatus:0
+                });
             }
 
             //旧订单
@@ -58,6 +72,7 @@ Page({
                 order.getOrderInfoById(id, (data)=> {
                     that.setData({
                         orderStatus: data.status,
+
                         productsArr: data.snap_items,
                         account: data.total_price,
                         basicInfo: {
@@ -106,6 +121,7 @@ Page({
 
         /*下单和付款*/
         pay:function(){
+            wx.removeStorageSync('pt');
             if(!this.data.addressInfo){
                 this.showTips('下单提示','请填写您的收货地址');
                 return;

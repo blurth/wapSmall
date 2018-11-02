@@ -25,11 +25,16 @@ Page({
     diary.getDetail(this.data.id, (data) => {
       
       that.data.article = data.content,
-
+        that.setData({
+          loadingHidden:true
+      });
         callback && callback();
 
       var temp = WxParse.wxParse('article', 'html', that.data.article, that, 0);
+
+
     });
+    
   },
 
   onShareAppMessage: function () {

@@ -24,7 +24,8 @@
     "pages/edit/edit",
     "pages/home/cut/cut",
     "pages/home/goods/goods",
-    "pages/home/hcut/hcut"
+    "pages/home/hcut/hcut",
+    "pages/home/ptuan/ptuan"
   ],
   "window": {
     "navigationBarTitleText": "",
@@ -60,7 +61,6 @@
         "selectedIconPath": "imgs/toolbar/case@selected.png",
         "text": "案列"
       },
-
       {
         "pagePath": "pages/my/my",
         "iconPath": "imgs/toolbar/my.png",

@@ -14,12 +14,11 @@
 
 
            
-       
         <view class="basic-info-box">
-            <view class="stock" wx:if="{{goodsArr.stock>0}}">有货</view>
+            <view class="stock" wx:if="{{goodsArr.stock>0}}"></view>
             <view class="stock no" wx:else>缺货</view>
             <view class="name">{{goodsArr.name}}</view>
-            <view class="price">原价￥{{goodsArr.price}}</view>
+            <view wx:if="{{goodsArr.gnature==2}}" class="price">原价￥{{goodsArr.price}}</view>
             <view class="f_price">底价￥{{goodsArr.f_price}}</view>
         </view>
     </view>
@@ -38,7 +37,31 @@
                <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
             </view>
             <view class="product-detail-properties" hidden="{{currentTabsIndex!=1}}">
-               {{goodsArr.properties.name}}
+              
+
+               <view class="ptuan-info-box" wx:if="{{goodsArr.gnature==2}}">
+
+        <view class="pinfo-list-box">
+            <view class="pinfo-list">
+                <image src="../../../image/pingtuan/1.png"></image>
+                <text>支付开团或参团</text>
+            </view>
+            <view class="pinfo-list">
+                <image src="../../../image/pingtuan/2.png"></image>
+                <text>邀请好友一起拼团</text>
+            </view>
+            <view class="pinfo-list">
+                <image src="../../../image/pingtuan/3.png"></image>
+                <text>达到人数分别发货</text>
+            </view>
+            <view class="pinfo-list">
+                <image src="../../../image/pingtuan/4.png"></image>
+                <text>人数不够自动退款</text>
+            </view>
+        </view>
+    </view>
+
+     
             </view>
             <view class="product-detail-protect" hidden="{{currentTabsIndex!=2}}">
                 <view>支持分期</view>
@@ -46,7 +69,36 @@
         </view>
     </view>
 
-<view class='fix' bindtap='cutOpen' data-id="{{goodsArr.id}}" data-from="self" ><text>立即发起砍价，最低可砍到{{goodsArr.f_price}}元</text></view>
+<view wx:if="{{goodsArr.gnature==1}}" class='fix' bindtap='cutOpen' data-id="{{goodsArr.id}}" data-from="self" ><text>立即发起砍价，最低可砍到{{goodsArr.f_price}}元</text></view>
+
+
+<!-- <view  class='fix' bindtap='ptOpen' data-id="{{goodsArr.id}}" data-from="self" > -->
+<view wx:else class="footer-box">
+        <view class="box-list">
+            <image src="../../../imgs/goods_service.png"></image>
+            <button openType="contact" sessionFrom="weapp"></button>
+        </view>
+        <view bindtap="{{favicon==0?'fav':'del'}}" class="box-list">
+            <image src="../../../imgs/goods_collect.png" wx:if="{{favicon==0}}"></image>
+            <image src="../../../imgs/goods_collect_checked.png" wx:if="{{favicon==1}}"></image>
+        </view>
+        <view bindtap="goPingtuanTap" class="box-title buy-now shares" wx:if="{{ptuanCt}}">
+          我已发起过拼团 | 查看拼团详情
+        </view>
+        <block wx:if="{{!ptuanCt}}">
+            <view bindtap="tobuy"  data-price="{{goodsArr.price}}" class="box-title ono">
+                <view class="boxshop-yuan">Ұ {{goodsArr.price}}</view>
+                <view class="box-shop-cart">原价购买</view>
+            </view>
+            <view bindtap="pingtuan" class="box-title buy-now twt">
+                <view class="boxshop-yuan">Ұ {{goodsArr.f_price}}</view>
+                <view class="box-shop-cart">一键开团</view>
+            </view>
+        </block>
+    </view>
+
+<!-- </view> -->
+
 
 </view>
 

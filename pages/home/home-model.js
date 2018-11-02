@@ -51,13 +51,23 @@ class Home extends Base{
 
     allCut(callback) {
       var param = {
-        url: 'goods/all',
+        url: 'goods/cutrecent',
         sCallback: function (data) {
           callback && callback(data);
         }
       };
       this.request(param);
     }
+
+  getPtuanData(callback) {
+    var param = {
+      url: 'goods/ptrecent',
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(param);
+  }
 };
 
 export {Home};

@@ -20,7 +20,7 @@
   </view>
 
   <!--地址-->
-  <view class="order-address-info {{orderStatus!=0?'disabled':''}}" ontap="editAddress">
+  <view wx:if="{{Ptaddress}}" class="order-address-info {{orderStatus!=0?'disabled':''}}" ontap="editAddress">
     <block wx:if="{{addressInfo}}">
       <view class="contact-box">
         <view>
@@ -53,6 +53,7 @@
     <block wx:for="{{productsArr}}">
       <view class="product-item">
         <view class="item-left">
+            <image wx:if="{{!Ptaddress}}" src="{{item.top_img}}"></image>
           <image src="{{item.main_img_url}}"></image>
         </view>
         <view class="item-middle">

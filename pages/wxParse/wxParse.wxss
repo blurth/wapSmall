@@ -89,12 +89,13 @@ view{
     margin: 10px 0;
 }
 
-.wxParse-video-video{
+.wxParse-video-video{ 
     width:100%;
 }
 
 .wxParse-img{
     /*background-color: #efefef;*/
+    display:block;
     overflow: hidden;
     width:750rpx;
 

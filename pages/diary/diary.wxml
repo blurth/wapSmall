@@ -1,6 +1,6 @@
 <import src="../wxParse/wxParse.wxml"/>
 
-  <view class="container cart-container">
+  <view class="container cart-container" hidden="{{!loadingHidden}}">
 
       <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
 
@@ -9,3 +9,6 @@
       </button>
       
   </view>
+  <loading hidden="{{loadingHidden}}">
+    加载中...
+  </loading>

@@ -81,9 +81,9 @@ Page({
                 tempObj[key]=this.data.product[key];
             }
         }
-console.log(tempObj);
+
         cart.add(tempObj,this.data.productCounts);
-    },
+    }, 
 
     /*加入购物车动效*/
     _flyToCartEffect:function(events){

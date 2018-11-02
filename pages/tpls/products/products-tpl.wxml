@@ -18,7 +18,7 @@
 <view style="margin-top: 10rpx;">{{item.describe}}...</view>
              <view class="bottom_text">
                     <view class="project">#{{item.category.name}}</view>
-                    <view class="price"><image class="eye_img" src="/imgs/eye.png" mode="aspectFill"></image> <view class='five'>{{item.five}}</view></view>
+                    <!-- <view class="price"><image class="eye_img" src="/imgs/eye.png" mode="aspectFill"></image> <view class='five'>{{item.five}}</view></view> -->
               </view>
               
                 </view>
