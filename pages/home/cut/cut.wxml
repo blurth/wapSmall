@@ -16,9 +16,8 @@
       <view class='shu-c'>
       <text class="f_price">{{goodsArr.f_price}}￥</text>
     <text class="price">{{goodsArr.price}}￥</text>
-    </view>
+    </view> 
      
-
     
     </view>
     </view>

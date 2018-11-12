@@ -2,8 +2,7 @@ import { Home } from 'home-model.js';
 var home = new Home(); 
 Page({
     data: { 
-        loadingHidden: false,
-      taokouling:'1234566'
+        loadingHidden: false
     },
     onLoad: function () {
         this._loadData();
@@ -48,16 +47,16 @@ Page({
 
     },
     onBannerItemTap: function (event){
-      var id = home.getDataSet(event, 'id');
-      var name = home.getDataSet(event, 'name');
-      if(id == 1){
-        wx.navigateTo({
-          url: '../special/special/recent' 
-        })
-      }
-      wx.navigateTo({
-        url: '../diary/diary?id=' + id + '&name=' + name
-      })
+      // var id = home.getDataSet(event, 'id');
+      // var name = home.getDataSet(event, 'name');
+      // if(id == 1){
+      //   wx.navigateTo({
+      //     url: '../special/special/recent' 
+      //   })
+      // }
+      // wx.navigateTo({
+      //   url: '../diary/diary?id=' + id + '&name=' + name
+      // })
     },
 
 
@@ -111,32 +110,12 @@ Page({
       
     },
 
-    oonThemeAItemTap:function(){
-      wx.navigateTo({
-        url: 'video/video'
-      })
-    },
   onGoodsItemTap: function (event) {
       var id = home.getDataSet(event,'id');
       wx.navigateTo({
         url: 'goods/goods?id='+id,
       })
     },
-
-
-  // onGoodsItemTap:function(){
-  //   var that = this;
-  //    wx.setClipboardData({
-  //      data: that.data.taokouling,
-  //      success: function (res) {
-  //       console.log('successfuly')
-
-  //      }  
-  //   });
-
-
-
-  // },
 
     onPullDownRefresh: function(){
         this._loadData(()=>{

@@ -43,9 +43,6 @@ Page({
 
           var temp = WxParse.wxParse('article', 'html', that.data.article, that, 0); 
         });
-
-
-
     },
 
     //选择购买数目

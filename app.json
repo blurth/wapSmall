@@ -25,7 +25,8 @@
     "pages/home/cut/cut",
     "pages/home/goods/goods",
     "pages/home/hcut/hcut",
-    "pages/home/ptuan/ptuan"
+    "pages/home/ptuan/ptuan",
+    "pages/porder/porder"
   ],
   "window": {
     "navigationBarTitleText": "",

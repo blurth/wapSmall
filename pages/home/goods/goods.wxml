@@ -32,8 +32,6 @@
         </view>
         <view class="product-detail-box">
             <view class="product-detail-imgs" hidden="{{currentTabsIndex!=0}}">
-              
-
                <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
             </view>
             <view class="product-detail-properties" hidden="{{currentTabsIndex!=1}}">
@@ -72,7 +70,6 @@
 <view wx:if="{{goodsArr.gnature==1}}" class='fix' bindtap='cutOpen' data-id="{{goodsArr.id}}" data-from="self" ><text>立即发起砍价，最低可砍到{{goodsArr.f_price}}元</text></view>
 
 
-<!-- <view  class='fix' bindtap='ptOpen' data-id="{{goodsArr.id}}" data-from="self" > -->
 <view wx:else class="footer-box">
         <view class="box-list">
             <image src="../../../imgs/goods_service.png"></image>
@@ -90,16 +87,12 @@
                 <view class="boxshop-yuan">Ұ {{goodsArr.price}}</view>
                 <view class="box-shop-cart">原价购买</view>
             </view>
-            <view bindtap="pingtuan" class="box-title buy-now twt">
+            <view bindtap="pingtuan" data-price="{{goodsArr.f_price}}" class="box-title buy-now twt">
                 <view class="boxshop-yuan">Ұ {{goodsArr.f_price}}</view>
                 <view class="box-shop-cart">一键开团</view>
             </view>
         </block>
     </view>
-
-<!-- </view> -->
-
-
 </view>
 
 <loading hidden="{{loadingHidden}}">

@@ -1,9 +1,9 @@
 <import src="../tpls/products/products-tpl.wxml"/>
 <view class="container home-container" hidden="{{!loadingHidden}}">
     <swiper indicator-dots="true" autoplay="true" class="swiper">
-        <block wx:for="{{bannerArr}}">
-            <swiper-item class="banner-item" bindtap="onBannerItemTap" data-id="{{item.key_word}}">
-                <image class="item-image" src="{{item.img.url}}" mode="aspectFill" />
+        <block wx:for="{{bannerArr}}" wx:for-item="bannerVo" wx:key="vo">
+            <swiper-item class="banner-item" bindtap="onBannerItemTap" data-id="{{bannerVo.key_word}}">
+                <image class="item-image" src="{{bannerVo.img.url}}" mode="aspectFill" />
             </swiper-item>
         </block>
     </swiper>
@@ -12,75 +12,63 @@
         <view class="home-main-theme">
             <view class="home-main-header">—YUEHUAPLASTIC—</view>
             <view class="theme-box">
-                <block wx:for="{{themeArr}}" >     
-<view wx:if="{{item.id !=3}}" class="theme-item" bindtap="onThemeAItemTap" data-id="{{item.id}}" data-name="{{item.name}}">
-      <image src="{{item.topic_img.url}}"></image>
+                <block wx:for="{{themeArr}}" wx:for-item="theme" wx:key="vo">     
+<view wx:if="{{theme.id !=3}}" class="theme-item" bindtap="onThemeAItemTap" data-id="{{theme.id}}" data-name="{{theme.name}}">
+      <image src="{{theme.topic_img.url}}"></image>
       </view>
 <button wx:else class="theme-item fen-q" open-type="contact" session-from="weapp">
-      <image src="{{item.topic_img.url}}"></image>
+      <image src="{{theme.topic_img.url}}"></image>
       </button>
              
 </block>
             </view>
         </view>
-        <!--案例展示-->
-
-      <!-- bindtap='oonThemeAItemTap'<image src='{{videoArr}}' mode='aspectFill'></image> -->
+       
 
       <!-- 砍价开始 -->
-    <view class='case-item' bindtap='allCut'>
-       <view class='ca-top'>
+    <view class='case-item'>
+       <view class='ca-top'  bindtap='allCut'>
          <text>全民拼团</text>
          <image src='../../imgs/righ.png'></image>
        </view>
 
-<view class='ca-bottom'>
- <block wx:for="{{ptArr}}" >     
-     <view>
-<view class='cell no1' data-id="{{item.id}}" bindtap='onGoodsItemTap'>
-    <view class='describe'>{{item.name}}</view>
-    <view class='cell-img'><image src='{{item.top_img}}'></image>
-      <view class='cell-text'>{{item.f_price}}起</view>     
-    </view>
-        
-</view>
-
-
-
-</view>
-         </block>
-      
-
-
-</view>
-
-
-        
-    </view>   
+        <view class='ca-bottom'>
+            <block wx:for="{{ptArr}}" wx:for-item="pt" wx:key="vo">     
+                
+                    <view class='cell no1' data-id="{{pt.id }}" bindtap='onGoodsItemTap'>
+                        <view class='describe'>{{pt.name}}</view>
+                        <view class='cell-img'><image src='{{pt.top_img}}'></image>
+                        <view class='cell-text'>{{pt.f_price}}起</view>     
+                        </view> 
+                    </view>
+            
+            </block>
+        </view>
+  </view>   
     <!-- 砍价开始 -->
  <view class="kanjia-container" wx:if="{{cutArr}}">
-        <view bindtap="tapSales" class="kanjia-title" data-id="{{item.linkUrl}}">
+        <view bindtap="tapSales" class="kanjia-title">
             <text>全民砍价</text>
             <image src="../../image/home_more.png"></image>
         </view>
-        <view bindtap="onGoodsItemTap" class="kanjia-list" data-id="{{item.id}}" wx:for="{{cutArr}}" wx:key="{{id}}">
+        <view bindtap="onGoodsItemTap" class="kanjia-list" data-id="{{cut.id}}" wx:for="{{cutArr}}" wx:for-item="cut" wx:key="id">
             <view class="kanjia-list-image">
-                <image src="{{item.top_img}}"></image>
+                <image src="{{cut.top_img}}"></image>
             </view>
             <view class="kanjia-list-info">
-                <view class="kanjia-list-info-title">{{item.name}}</view>
-                <view class="kanjia-list-info-info">{{item.descript}}</view>
+                <view class="kanjia-list-info-title">{{cut.name}}</view>
+                <view class="kanjia-list-info-info">{{cut.descript}}</view>
                 <view class="kanjia-list-info-money">
                     <view class="kanjia-list-info-money-a">
-                        <text class="a">Ұ{{item.f_price}}</text>
+                        <text class="a">Ұ{{cut.f_price}}</text>
                         <text class="b">底价</text>
                     </view>
                     <view class="kanjia-list-info-money-a">
-                        <text>Ұ{{item.price}}</text>
+                        <text>Ұ{{cut.price}}</text>
                         <text>原价</text>
                     </view>
                     <view class="kanjia-list-info-money-a">
-                        <text>{{item.stock}}</text>
+                        <text>{{cut.stock}}</text>
                         <text>限量</text>
                     </view>
                 </view>
@@ -89,12 +77,10 @@
     </view>
     
 <!-- 砍价结束 -->
-    <view class="home-main-products">
+    <view class="home-main-products" wx:if="{{diaryArr}}">
         <view class="home-main-header">案例分享</view>
       <template is="products" data="{{diaryArr:diaryArr}}"/>
-
     </view>
-        
     </view>
 </view>
 <loading hidden="{{loadingHidden}}">

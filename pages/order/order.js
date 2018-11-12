@@ -15,10 +15,11 @@ Page({
         },
 
         /*
-        * 订单数据来源包括两个：
+        * 订单数据来源包括四个：
         * 1.购物车下单
         * 2.旧的订单
         * 3.拼团的订单
+        * 4.砍价的订单
         * */
         onLoad: function (options) {
 
@@ -47,11 +48,10 @@ Page({
                     that._bindAddressInfo(res);
                 });
             }else if(ptflag){
-               
-               
+                          
                 this.setData({
-                    Ptaddress:false,
-                    addressInfo:true,
+                    Ptaddress:true,
+                    addressInfo:false,
                     productsArr: goods.getPtDataFromLocal(true),
                     account:options.account,
                     orderStatus:0

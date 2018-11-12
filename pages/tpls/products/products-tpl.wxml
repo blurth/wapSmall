@@ -1,13 +1,13 @@
 <template name="products">
     <view class="products-box">
-        <block wx:for="{{diaryArr}}">
+        <block wx:for="{{diaryArr}}" wx:for-item="diary" wx:key="vo">
 
 
-            <view class="products-item" bindtap="onDiaryItemTap" data-id="{{item.id}}" data-name="{{item.name}}">
+            <view class="products-item" bindtap="onDiaryItemTap" data-id="{{diary.id}}" data-name="{{diary.name}}">
 
 <view class='case-top'>
-                <image class="products-image" src="{{item.f_img}}" mode="aspectFill"></image>
-                    <image class="products-image2" src="{{item.s_img}}" mode="aspectFill"></image>
+                <image class="products-image" src="{{diary.f_img}}" mode="aspectFill"></image>
+                    <image class="products-image2" src="{{diary.s_img}}" mode="aspectFill"></image>
                     <view class='lab-l'>Before</view> 
                     <view class='lab-r'>After</view>
 </view>
@@ -15,9 +15,9 @@
 
 
                 <view class="products-item-bottom">
-<view style="margin-top: 10rpx;">{{item.describe}}...</view>
+<view style="margin-top: 10rpx;">{{diary.describe}}...</view>
              <view class="bottom_text">
-                    <view class="project">#{{item.category.name}}</view>
+                    <view class="project">#{{diary.category.name}}</view>
                     <!-- <view class="price"><image class="eye_img" src="/imgs/eye.png" mode="aspectFill"></image> <view class='five'>{{item.five}}</view></view> -->
               </view>
               

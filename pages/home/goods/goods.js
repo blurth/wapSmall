@@ -17,8 +17,6 @@ Page({
    * 页面的初始数据
    */
   onLoad: function (options) {
-
- 
     this.data.id = options.id;
     this._loadData();
 
@@ -74,10 +72,6 @@ Page({
 
 
        
-  
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   tobuy:function(event){
     var tempObj={},keys=['id','name','top_img','price'];
     
@@ -119,13 +113,21 @@ Page({
 },
 
 
-pingtuan:function (event) {
-  
-},
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  pingtuan:function (event) {
+    var tempObj={},keys=['id','name','top_img','price'];
+    for(var key in this.data.product){
+      if(keys.indexOf(key)>=0){
+          tempObj[key]=this.data.product[key];
+      }
   }
+  this._add(tempObj,this.data.productCounts);
+    var price = detail.getDataSet(event, 'price');
+    this.data.account = price;
+ 
+    wx.navigateTo({
+      url:'../../porder/porder?account='+this.data.account+'&from=pt'
+    });
+  },
+
+
 })

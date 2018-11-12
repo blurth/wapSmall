@@ -22,13 +22,11 @@ class Detail extends Base {
     if(flag){
       
         var newRes=[];
-       
            
                 newRes.push(res);
-            
         
         res=newRes;
-        
+      
     }
  
     return res;
