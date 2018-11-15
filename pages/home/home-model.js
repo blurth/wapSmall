@@ -7,7 +7,6 @@ class Home extends Base{
     }
 
     getBannerData(callback){
-        var that=this;
         var param={
             url: 'banner/1',
 

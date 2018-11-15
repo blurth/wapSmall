@@ -11,6 +11,21 @@ class Porder extends Base {
     this._storageKeyName = 'newOrder';
   }
 
+
+  prePtOrder(id, callback) {
+    var that = this;
+    var allParams = {
+      url: 'ptuan/self_pt',
+      type: 'post',
+      data: { orderId: id },
+      sCallback: function (data) {
+        callback && callback(data);
+      },
+      eCallback: function () {
+      }
+    };
+    this.request(allParams);
+  }
   /*下订单*/
   doOrder(param, callback) {
     var that = this;
@@ -37,7 +52,7 @@ class Porder extends Base {
   * */
   execPay(orderNumber, callback) {
     var allParams = {
-      url: 'pay/pre_order',
+      url: 'pay/pay_cut',
       type: 'post',
       data: { id: orderNumber },
       sCallback: function (data) {

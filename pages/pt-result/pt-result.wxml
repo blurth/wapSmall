@@ -1,0 +1,88 @@
+<view class="container">
+  <view class="header-container">
+      <navigator hoverClass="navigator-hover" openType="switchTab" url="/pages/index/index" wx:if="{{share}}">
+          <image class="goback" src="../../images/gohome.png"></image>
+      </navigator>
+      <navigator delta="1" hoverClass="navigator-hover" openType="navigateBack" wx:if="{{!share}}">
+          <image class="goback" src="../../images/goback.png"></image>
+      </navigator>
+      <view class="header-name">拼团详情</view>
+  </view>
+  <view bindtap="goodsTap" class="goods-box">
+      <image src="{{goodsDetail.basicInfo.pic}}"></image>
+      <view class="goods-info">
+          <view class="goods-title">{{goodsDetail.basicInfo.name}}</view>
+          <view class="goods-text">{{goodsDetail.basicInfo.characteristic}}</view>
+          <view class="goods-tuan">{{ptuanSet.numberPersion}}人团
+      <text>Ұ {{goodsDetail.basicInfo.pingtuanPrice}}</text>
+          </view>
+      </view>
+  </view>
+  <view class="pingtuan-box" wx:if="{{pingList}}">
+      <view class="pingtuan-info-box">
+          <view class="line"></view>
+          <view class="pingtuan-info">
+              <image src="{{pingList.apiExtUser.avatarUrl}}"></image>
+              <text>团长</text>
+              <view class="pingtuan-info-name">
+          {{pingList.apiExtUser.nick}}
+        </view>
+          </view>
+          <view class="pingtuan-info">
+              <image src="../../images/pingtuan/user.png"></image>
+          </view>
+      </view>
+      <view class="pingtuan-info-number">
+      还差
+      <text>{{ptuanSet.numberPersion-pingList.helpNumber}}</text>人成团，快来一起拼团吧～
+    </view>
+      <view class="pingtuan-info-times">
+          <text class="lin-l"></text>剩余
+      <text class="day" wx:if="{{countDownDay!=0}}">{{countDownDay}}</text>
+          <text wx:if="{{countDownDay!=0}}">:</text>
+          <text class="hou" wx:if="{{countDownHour!=0}}">{{countDownHour}}</text>
+          <text wx:if="{{countDownHour!=0}}">:</text>
+          <text class="min" wx:if="{{countDownMinute!=0}}">{{countDownMinute}}</text>
+          <text wx:if="{{countDownMinute!=0}}">:</text>
+          <text class="con">{{countDownSecond}}</text> 结束
+      <text class="lin-r"></text>
+      </view>
+  </view>
+  <view class="vitery-ptuan-box" wx:if="{{!pingList}}">
+      <view class="vitery-ptuan">好友已经拼团成功~</view>
+      <view bindtap="goodsTap" class="vitery-ptuan-btn">我也要发起拼团</view>
+  </view>
+  <block wx:if="{{pingList}}">
+      <view class="ptuan-joiner-box">
+          <view class="ptuan-joiner-list" wx:for="{{ptuaninfo}}" wx:key="id">
+              <image src="{{item.apiExtUserHelp.avatarUrl}}"></image>
+              <view class="joiner-name">{{item.apiExtUserHelp.nick}}</view>
+              <view class="joiner-time">{{item.dateAdd}}</view>
+              <view class="btn" wx:if="{{item.uidHelp==ktid}}">团长</view>
+              <view class="btn l" wx:if="{{item.uidHelp!=ktid}}">团员</view>
+          </view>
+      </view>
+      <view class="footer" wx:if="{{userId!=ktid}}">
+          <view bindtap="getshare" class="home">
+              <image src="../../images/share.png"></image>
+              <text>分享</text>
+          </view>
+          <view class="goPingtuan" wx:if="{{ptuaninfoUs}}">
+        我已参团 | 请等待拼团成功
+      </view>
+          <view bindtap="pingtuan" class="goPingtuan" wx:if="{{!ptuaninfoUs}}">
+        Ұ {{goodsDetail.basicInfo.pingtuanPrice}} | 我也要参团
+      </view>
+      </view>
+      <view class="footer" wx:if="{{userId==ktid}}">
+          <view bindtap="gohome" class="home">
+              <image src="../../images/nav/home-on.png"></image>
+              <text>去首页</text>
+          </view>
+          <view bindtap="getshare" class="goPingtuan">邀请好友拼团</view>
+      </view>
+  </block>
+
+</view>
+
+

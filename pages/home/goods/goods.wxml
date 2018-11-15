@@ -12,16 +12,51 @@
     </swiper>
         </view>
 
+<view class="goods-left" wx:if="{{pintuan}}">
+            <view class="goods-title">{{goodsArr.name}}</view>
+            <view class="goods-characteristic">{{goodsArr.descript}}</view>
 
-           
-        <view class="basic-info-box">
+        <view class="goods-ptuan-box">
+        
+            <view class="goods-ptuan">
+        拼团价 Ұ
+        <text>{{goodsArr.f_price}}</text>
+            </view>
+            <view class="goods-ptuan-info">
+                <text class="txa">{{goodsArr.estimate_id}}人开团</text>
+                <text class="txb">原价 Ұ{{goodsArr.f_price}}</text>
+            </view>
+            <view class="goods-right">还剩{{goodsArr.stock}}件</view>
+        </view>
+ </view>
+        <view class="basic-info-box" wx:else>
             <view class="stock" wx:if="{{goodsArr.stock>0}}"></view>
             <view class="stock no" wx:else>缺货</view>
             <view class="name">{{goodsArr.name}}</view>
             <view wx:if="{{goodsArr.gnature==2}}" class="price">原价￥{{goodsArr.price}}</view>
             <view class="f_price">底价￥{{goodsArr.f_price}}</view>
         </view>
+
+
     </view>
+   <block wx:if="{{ptlist}}"> 
+    <view class="ptuan-user-box">
+        <view class="ptuan-user-title">参加以下网友的团，组团成功立即发货</view>
+
+        <view bindtap="addPingTuan" class="ptuan-user-list" wx:if="{{item.ptstatus==1}}" data-id="{{item.id}}" data-price="{{item.price}}" data-uid="{{item.uid}}" wx:for="{{ptlist}}" wx:key="vo" >
+            <image src="https://wx.qlogo.cn/mmopen/vi_32/eMHPmDXKEu6kajVIKT5A14l0xxJNsvIp85EhtUDLRLr5YoOIE0Tg0tLrVla5KMRicJIcVcHRsyAAHDAx22NkAaQ/132"></image>
+            <view class="ptuan-user-info-box">
+                <view class="ptuan-user-name">
+                    <text>clear</text>
+                    <text>还差{{item.ptnumber-item.now_num}}人成团</text>
+                </view>
+            </view>
+            <view class="ptuan-user-btn">去参团></view>
+        </view>
+
+    </view>
+
+</block>
     <view class="detail-bottom-box">
         <view class="tabs-box">
             <block wx:for="{{['商品详情' ,'活动须知','售后保障']}}">

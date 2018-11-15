@@ -32,8 +32,16 @@ class Detail extends Base {
     return res;
    
 };
-
-
+//判断是否已有正在进行的团购
+  isPtSelf(id, callback){
+    var param = {
+      url: 'ptuan/isptuan?goods_id=' + id,
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(param);
+  }
   getDetail(id, callback) {
     var param = {
       url: 'goods/' + id,
@@ -44,5 +52,17 @@ class Detail extends Base {
     this.request(param);
   }
 
+  getPtlist(id,callback){
+    var param={
+      url: 'goods/ptlist?id=' + id,
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    }
+
+    this.request(param);
+  };
 }
+
+
 export { Detail };

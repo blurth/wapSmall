@@ -1,0 +1,21 @@
+<view class="container">
+
+    <view bindtap="onGoodsItemTap" class="pingtuan-list" data-id="{{item.id}}" wx:for="{{ptlist}}" wx:key="id">
+        <view class="pingtuan-image">
+            <image src="{{item.top_img}}"></image>
+        </view>
+        <view class="pingtuan-info">
+            <view class="pingtuan-title">{{item.name}}</view>
+            <view class="pingtuan-tetx">{{item.descript}}</view>
+            <view class="pingtuan-sales">还剩
+        <text>{{item.stock}}</text>件</view>
+            <view class="pingtuan-old-money">单独购买
+        <text>Ұ{{item.Price}}</text>
+            </view>
+            <view class="pingtuan-new-money">
+                <text>{{item.estimate_id}}人团 Ұ</text>{{item.f_price}}
+      </view>
+            <view class="pingtuan-btn">去拼团</view>
+        </view>
+    </view>
+</view>

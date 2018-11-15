@@ -25,9 +25,9 @@
         </view>
        
 
-      <!-- 砍价开始 -->
+      <!-- 全民拼团 -->
     <view class='case-item'>
-       <view class='ca-top'  bindtap='allCut'>
+       <view class='ca-top'  bindtap='allPt'>
          <text>全民拼团</text>
          <image src='../../imgs/righ.png'></image>
        </view>

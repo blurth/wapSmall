@@ -26,7 +26,7 @@ Page({
             if (fromPtFlag){
               this.setData({
                 Ptaddress:false,
-                addressInfo:true,
+                addressInfo:false,
                 productsArr: goods.getPtDataFromLocal(true),
                 account:options.account,
                 orderStatus:0
@@ -213,9 +213,29 @@ Page({
                 if(statusCode!=0){
                     
                     var flag = statusCode == 2;
-                    wx.navigateTo({
-                        url: '../pay-result/pay-result?id=' + id + '&flag=' + flag + '&from=order'
+
+                    var can = wx.getStorageSync('can_id');
+                    
+                    porder.prePtOrder(id,(data)=>{
+                        console.log(data);
                     });
+
+                    if(can){
+                       //支付成功拼团成功
+                       wx.navigateTo({
+                        url: '../pt-result/pt-result?id=' + id + '&can=' + can
+                    });
+
+
+
+
+                    }else{
+                        //支付成功拼团成功
+                        wx.navigateTo({
+                            url: '../pt-result/pt-result?id=' + id + '&flag=' + flag
+                        });
+                    }
+                    
                 }
             });
         }

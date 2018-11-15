@@ -26,7 +26,9 @@
     "pages/home/goods/goods",
     "pages/home/hcut/hcut",
     "pages/home/ptuan/ptuan",
-    "pages/porder/porder"
+    "pages/porder/porder",
+    "pages/pt-result/pt-result",
+    "pages/pintuan-list/pintuan-list"
   ],
   "window": {
     "navigationBarTitleText": "",

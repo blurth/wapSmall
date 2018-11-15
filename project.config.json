@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 28,
 			"list": [
 				{
 					"id": -1,
@@ -194,6 +194,18 @@
 					"name": "自己砍",
 					"pathName": "pages/home/cut/cut",
 					"query": "id=1"
+				},
+				{
+					"id": 27,
+					"name": "帮砍",
+					"pathName": "pages/home/goods/goods",
+					"query": "id=4"
+				},
+				{
+					"id": -1,
+					"name": "拼团列表",
+					"pathName": "pages/pintuan-list/pintuan-list",
+					"query": ""
 				}
 			]
 		}

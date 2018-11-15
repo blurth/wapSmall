@@ -373,3 +373,164 @@
   
   }
   
+  .ptuan-user-box {
+    width: 100%;
+}
+.ptuan-user-title {
+  font-size: 26rpx;
+  color: #999;
+  padding-left: 22rpx;
+  height: 66rpx;
+  border-bottom: 1px solid #f5f5f5;
+  line-height: 66rpx;
+}
+
+.ptuan-user-list {
+  width: 90%;
+  margin: 0 auto;
+  height: 110rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+
+.ptuan-user-list image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 1px solid #b5272d;
+  position: absolute;
+  z-index: 999;
+  background-color: #fff;
+}
+
+.ptuan-user-info-box {
+  position: absolute;
+  width: 88%;
+  left: 65rpx;
+  border: 1px solid #b5272d;
+  height: 80rpx;
+  margin-top: 12rpx;
+}
+
+.ptuan-user-name {
+  float: left;
+  width: 50%;
+  margin-left: 54rpx;
+  font-size: 24rpx;
+  line-height: 39rpx;
+}
+
+.ptuan-user-name text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ptuan-user-btn {
+  float: right;
+  height: 82rpx;
+  line-height: 82rpx;
+  background-color: #b5272d;
+  font-size: 28rpx;
+  color: #fff;
+  width: 150rpx;
+  text-align: center;
+  margin-top: 12rpx;
+  border-bottom-right-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.goods-ptuan-box {
+  background-color: #b5272d;
+  height: 100rpx;
+  width: 100%;
+  margin-top: 10rpx;
+}
+
+.goods-ptuan {
+  float: left;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 20rpx;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.goods-ptuan text {
+  margin-left: 8rpx;
+  font-size: 40rpx;
+}
+
+.goods-ptuan-info {
+  float: left;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 36rpx;
+}
+
+.goods-ptuan-info .txa {
+  display: block;
+  margin-top: 16rpx;
+}
+
+.goods-ptuan-info .txb {
+  display: block;
+  text-decoration: line-through;
+}
+.goods-right {
+  float: right;
+  margin-right: 20rpx;
+  height: 100rpx;
+  line-height: 110rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+.goods-left {
+    width: 100%;
+}
+
+.goods-title {
+    font-size: 34rpx;
+    color: #333;
+    padding-left: 30rpx;
+}
+
+.goods-characteristic {
+    font-size: 28rpx;
+    color: #999;
+    padding-left: 30rpx;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+}
+
+.box-title {
+    width: 29%;
+    font-size: 30rpx;
+    line-height: 44rpx;
+    text-align: center;
+}
+
+.box-title .boxshop-yuan {
+    margin-top: 10rpx;
+}
+
+.box-title .npx {
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.buy-now {
+    background-color: #b5272d;
+    color: #fff;
+}
+.twt {
+    width: 45%;
+}
+.shares {
+    width: 75%;
+    height: 100rpx;
+    line-height: 100rpx;
+    position: relative;
+}

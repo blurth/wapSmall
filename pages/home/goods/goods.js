@@ -11,6 +11,7 @@ Page({
     productCounts: 1,
     currentTabsIndex: 0,
     cartTotalCounts: 0,
+    pintuan:false,
   },
 
   /**
@@ -27,7 +28,13 @@ Page({
 
     var that = this;
     detail.getDetail(this.data.id, (data) => {
-      that.data.article = data.content,
+      that.data.article = data.content;
+      if(data.gnature == 2){
+        that.setData({
+          pintuan:true,
+         
+        });
+      }
       that.setData({
         product:data,
         goodsArr: data,
@@ -40,9 +47,25 @@ Page({
       
     });
 
-    
+    detail.getPtlist(this.data.id,(data) => {
+      that.setData({
+        ptlist: data,
+      });
+    })
+
+    detail.isPtSelf(this.data.id,(data) => {
+      console.log(data);
+      if(data[0].ptstatus == 1){
+          that.setData({
+            ptuanCt: 1,
+          });
+      }
+   
+    })
 
   },
+
+  
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
@@ -69,8 +92,12 @@ Page({
       currentTabsIndex: index
     });
   },
-
-
+  //参加拼团
+  addPingTuan:function(event){
+    var id = detail.getDataSet(event,'id');
+    wx.setStorageSync('can_id',id);
+     this.pingtuan(event);
+  },
        
   tobuy:function(event){
     var tempObj={},keys=['id','name','top_img','price'];
@@ -112,8 +139,9 @@ Page({
     
 },
 
-
+ 
   pingtuan:function (event) {
+
     var tempObj={},keys=['id','name','top_img','price'];
     for(var key in this.data.product){
       if(keys.indexOf(key)>=0){
@@ -128,6 +156,15 @@ Page({
       url:'../../porder/porder?account='+this.data.account+'&from=pt'
     });
   },
+  goPingtuanTap:function (event) {
+    wx.navigateTo({
+      url:'../../pt-result/pt-result'
+    });
+    
+  },
+
+
+
 
 
 })
