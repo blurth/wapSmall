@@ -1,6 +1,6 @@
 .container {
     margin-bottom: 150rpx;
-    margin-top: 150rpx;
+    margin-top: 10rpx;
 }
 
 .header-container {

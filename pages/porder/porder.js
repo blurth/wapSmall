@@ -215,26 +215,20 @@ Page({
                     var flag = statusCode == 2;
 
                     var can = wx.getStorageSync('can_id');
+
                     
-                    porder.prePtOrder(id,(data)=>{
-                        console.log(data);
-                    });
-
-                    if(can){
-                       //支付成功拼团成功
-                       wx.navigateTo({
-                        url: '../pt-result/pt-result?id=' + id + '&can=' + can
-                    });
-
-
-
-
-                    }else{
-                        //支付成功拼团成功
-                        wx.navigateTo({
-                            url: '../pt-result/pt-result?id=' + id + '&flag=' + flag
+                    if(statusCode == 2){
+                        porder.prePtOrder(id,(data)=>{
+                            console.log(data);
                         });
                     }
+
+                    
+                        //支付成功拼团成功
+                        wx.navigateTo({
+                          url: '../pay-result/pay-result?id=' + id + '&flag=' + flag + '&from=order'
+                        });
+                    
                     
                 }
             });

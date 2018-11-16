@@ -1,11 +1,37 @@
-// pages/pt-result/pt-result.js
+import {PtResult} from 'pt-result-model.js';
+var result = new PtResult();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-     id:null
+     id:null,
+    autoplay: !![],
+    interval: 1e4,
+    duration: 500,
+    goodsDetail: {},
+    swiperCurrent: 0,
+    hasMoreSelect: ![],
+    selectSizePrice: 0,
+    shopNum: 0,
+    hideShopPopup: !![],
+    buyNumber: 0,
+    buyNumMin: 1,
+    buyNumMax: 0,
+    favicon: 0,
+    countDownDay: 0,
+    countDownHour: 0,
+    countDownMinute: 0,
+    countDownSecond: 0,
+    propertyChildIds: "",
+    propertyChildNames: "",
+    canSubmit: ![],
+    shopCarInfo: {},
+    selectptPrice: 0,
+    wxlogin: !![],
+    sharebox: !![],
+    sharecode: !![]
   },
 
   /**
@@ -23,6 +49,22 @@ Page({
 
   _loadData: function (id) {
     let that = this
+
+    result.getGoods(id,(data)=>{
+      that.setData({
+        goodsArr: data
+      })
+    })
+
+
+    result.isPtSelf(id, (data) => {
+      that.setData({
+        pingList: data
+      })
+    })
+
+
+    
     
       that.setData({
         id: id

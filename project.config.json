@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 28,
+			"current": 29,
 			"list": [
 				{
 					"id": -1,
@@ -206,6 +206,12 @@
 					"name": "拼团列表",
 					"pathName": "pages/pintuan-list/pintuan-list",
 					"query": ""
+				},
+				{
+					"id": 29,
+					"name": "dfd",
+					"pathName": "pages/pt-result/pt-result",
+					"query": "id=9"
 				}
 			]
 		}

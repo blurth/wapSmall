@@ -1,4 +1,7 @@
 // pages/authorize/index.js
+import { Index } from 'index-model.js';
+
+var index = new Index();  //实例化
 var app = getApp();
 Page({
 
@@ -69,7 +72,14 @@ Page({
       return;
     }
     
-    wx.setStorageSync('userInfo', e.detail.userInfo)
+    wx.setStorageSync('userInfo', e.detail.userInfo);
+   
+    index.saveUserDetail((data)=>{
+
+    });
+
+    
+
     wx.navigateBack();
     
   }

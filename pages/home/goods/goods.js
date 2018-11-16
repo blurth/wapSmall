@@ -55,7 +55,7 @@ Page({
 
     detail.isPtSelf(this.data.id,(data) => {
       console.log(data);
-      if(data[0].ptstatus == 1){
+      if(data.ptstatus == 1){
           that.setData({
             ptuanCt: 1,
           });
@@ -112,7 +112,7 @@ Page({
   this._add(tempObj,this.data.productCounts);
   
     wx.navigateTo({
-      url:'../../order/order?account='+this.data.account+'&from=pt'
+      url:'../../gorder/gorder?account='+this.data.account+'&from=goods'
     });
   },
 
@@ -157,8 +157,9 @@ Page({
     });
   },
   goPingtuanTap:function (event) {
+    var id = detail.getDataSet(event,'id');
     wx.navigateTo({
-      url:'../../pt-result/pt-result'
+      url:'../../pt-result/pt-result?id=' + id
     });
     
   },

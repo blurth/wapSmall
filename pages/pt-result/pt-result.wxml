@@ -1,20 +1,12 @@
 <view class="container">
-  <view class="header-container">
-      <navigator hoverClass="navigator-hover" openType="switchTab" url="/pages/index/index" wx:if="{{share}}">
-          <image class="goback" src="../../images/gohome.png"></image>
-      </navigator>
-      <navigator delta="1" hoverClass="navigator-hover" openType="navigateBack" wx:if="{{!share}}">
-          <image class="goback" src="../../images/goback.png"></image>
-      </navigator>
-      <view class="header-name">拼团详情</view>
-  </view>
+
   <view bindtap="goodsTap" class="goods-box">
-      <image src="{{goodsDetail.basicInfo.pic}}"></image>
+      <image src="{{goodsArr.top_img}}"></image>
       <view class="goods-info">
-          <view class="goods-title">{{goodsDetail.basicInfo.name}}</view>
-          <view class="goods-text">{{goodsDetail.basicInfo.characteristic}}</view>
-          <view class="goods-tuan">{{ptuanSet.numberPersion}}人团
-      <text>Ұ {{goodsDetail.basicInfo.pingtuanPrice}}</text>
+          <view class="goods-title">{{goodsArr.name}}</view>
+          <view class="goods-text">{{goodsArr.descript}}</view>
+          <view class="goods-tuan">{{goodsArr.estimate_id}}人团
+      <text>Ұ {{goodsArr.f_price}}</text>
           </view>
       </view>
   </view>
@@ -22,19 +14,21 @@
       <view class="pingtuan-info-box">
           <view class="line"></view>
           <view class="pingtuan-info">
-              <image src="{{pingList.apiExtUser.avatarUrl}}"></image>
+
+              <image src="{{pingList.friend[0].user.avatar_url}}"></image>
               <text>团长</text>
+
               <view class="pingtuan-info-name">
-          {{pingList.apiExtUser.nick}}
+          Clear
         </view>
           </view>
           <view class="pingtuan-info">
-              <image src="../../images/pingtuan/user.png"></image>
+              <image src="../../image/pingtuan/user.png"></image>
           </view>
       </view>
       <view class="pingtuan-info-number">
       还差
-      <text>{{ptuanSet.numberPersion-pingList.helpNumber}}</text>人成团，快来一起拼团吧～
+      <text>{{pingList.ptnumber-pingList.now_num}}</text>人成团，快来一起拼团吧～
     </view>
       <view class="pingtuan-info-times">
           <text class="lin-l"></text>剩余
@@ -54,17 +48,17 @@
   </view>
   <block wx:if="{{pingList}}">
       <view class="ptuan-joiner-box">
-          <view class="ptuan-joiner-list" wx:for="{{ptuaninfo}}" wx:key="id">
-              <image src="{{item.apiExtUserHelp.avatarUrl}}"></image>
-              <view class="joiner-name">{{item.apiExtUserHelp.nick}}</view>
-              <view class="joiner-time">{{item.dateAdd}}</view>
-              <view class="btn" wx:if="{{item.uidHelp==ktid}}">团长</view>
-              <view class="btn l" wx:if="{{item.uidHelp!=ktid}}">团员</view>
+          <view class="ptuan-joiner-list" wx:for="{{pingList.friend}}" wx:key="id">
+              <image src="{{item.user.avatar_url}}"></image>
+              <view class="joiner-name">{{item.user.nickname}}</view>
+              <view class="joiner-time">{{item.create_time}}</view>
+              <view class="btn" wx:if="{{item.is_command==1}}">团长</view>
+              <view class="btn l" wx:if="{{item.is_command==0}}">团员</view>
           </view>
       </view>
       <view class="footer" wx:if="{{userId!=ktid}}">
           <view bindtap="getshare" class="home">
-              <image src="../../images/share.png"></image>
+              <image src="../../image/share.png"></image>
               <text>分享</text>
           </view>
           <view class="goPingtuan" wx:if="{{ptuaninfoUs}}">
@@ -76,7 +70,7 @@
       </view>
       <view class="footer" wx:if="{{userId==ktid}}">
           <view bindtap="gohome" class="home">
-              <image src="../../images/nav/home-on.png"></image>
+              <image src="../../image/nav/home-on.png"></image>
               <text>去首页</text>
           </view>
           <view bindtap="getshare" class="goPingtuan">邀请好友拼团</view>

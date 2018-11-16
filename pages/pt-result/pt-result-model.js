@@ -10,6 +10,26 @@ class PtResult extends Base{
         super();
     }
 
+  isPtSelf(id, callback) {
+    var param = {
+      url: 'ptuan/isptuan?goods_id=' + id,
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(param);
+  }
+
+    getGoods(id, callback) {
+        var param = {
+          url: 'goods/' + id,
+          sCallback: function (data) {
+            callback && callback(data);
+          }
+        };
+        this.request(param);
+      }
+
     /*获取当前拼团的列表*/
     doOrder(param,callback){
         var that=this;
@@ -26,6 +46,8 @@ class PtResult extends Base{
             };
         this.request(allParams);
     }
+
+
 
   
 

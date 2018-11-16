@@ -51,7 +51,7 @@ Page({
                           
                 this.setData({
                     Ptaddress:true,
-                    addressInfo:false,
+                    addressInfo:true,
                     productsArr: goods.getPtDataFromLocal(true),
                     account:options.account,
                     orderStatus:0

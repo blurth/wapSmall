@@ -28,7 +28,8 @@
     "pages/home/ptuan/ptuan",
     "pages/porder/porder",
     "pages/pt-result/pt-result",
-    "pages/pintuan-list/pintuan-list"
+    "pages/pintuan-list/pintuan-list",
+    "pages/gorder/gorder"
   ],
   "window": {
     "navigationBarTitleText": "",
