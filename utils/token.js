@@ -22,10 +22,6 @@ class Token {
           else {
             this._veirfyFromServer(token);
           } 
-        
-
-
-
     }
 
     _veirfyFromServer(token) {
@@ -57,7 +53,6 @@ class Token {
                     method:'POST',
                     data:{
                         code:res.code
-                        
                     },
                     success:function(res){
                         wx.setStorageSync('token', res.data.token);

@@ -10,7 +10,7 @@
             <view class="pingtuan-sales">还剩
         <text>{{item.stock}}</text>件</view>
             <view class="pingtuan-old-money">单独购买
-        <text>Ұ{{item.Price}}</text>
+        <text>￥{{item.price}}</text>
             </view>
             <view class="pingtuan-new-money">
                 <text>{{item.estimate_id}}人团 Ұ</text>{{item.f_price}}

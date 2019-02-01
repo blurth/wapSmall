@@ -22,7 +22,10 @@ Page({
     this._loadData();
 
   },
+  onShow: function () {
+    this._loadData();
 
+  },
 
   _loadData: function (callback) {
 
@@ -54,7 +57,7 @@ Page({
     })
 
     detail.isPtSelf(this.data.id,(data) => {
-      console.log(data);
+  
       if(data.ptstatus == 1){
           that.setData({
             ptuanCt: 1,
@@ -94,8 +97,6 @@ Page({
   },
   //参加拼团
   addPingTuan:function(event){
-    var id = detail.getDataSet(event,'id');
-    wx.setStorageSync('can_id',id);
      this.pingtuan(event);
   },
        

@@ -30,7 +30,7 @@
                 <text>￥{{item.total_price}}</text>
               </view>
               <view>订单号：{{item.order_no}}</view>
-              <view>订单关闭时间：{{item.closing_time}}</view>
+              
             </view>
             <view class='order-pay-button' bindtap="rePay" data-id="{{item.id}}" data-index="{{index}}" wx:if="{{item.status==1}}">立即支付</view>
           </view>

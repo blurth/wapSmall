@@ -1,7 +1,7 @@
 var WxParse = require('../wxParse/wxParse.js');
 
 import { Diary } from 'diary-model.js';
-var diary = new Diary(); //实例化 首页 对象
+var diary = new Diary(); 
 Page({
 
   data: {
@@ -25,16 +25,16 @@ Page({
     diary.getDetail(this.data.id, (data) => {
       
       that.data.article = data.content,
-        that.setData({
-          loadingHidden:true
-      });
+
         callback && callback();
 
-      var temp = WxParse.wxParse('article', 'html', that.data.article, that, 0);
-
+        var temp = WxParse.wxParse('article', 'html', that.data.article, that, 0);
 
     });
-    
+
+    that.setData({
+      loadingHidden: true
+    });
   },
 
   onShareAppMessage: function () {

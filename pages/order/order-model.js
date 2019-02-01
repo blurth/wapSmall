@@ -33,7 +33,7 @@ class Order extends Base{
     * params:
     * norderNumber - {int} 订单id
     * return：
-    * callback - {obj} 回调方法 ，返回参数 可能值 0:商品缺货等原因导致订单不能支付;  1: 支付失败或者支付取消； 2:支付成功；
+    * callback - {obj} 回调方法 ，返回参数 可能值 0:商品缺货等原因导致订单不能支付;  1: 支付失败或者支付取消； 2:支付  成  功；
     * */
     execPay(orderNumber,callback){
         var allParams = {

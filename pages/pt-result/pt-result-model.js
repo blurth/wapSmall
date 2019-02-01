@@ -30,24 +30,18 @@ class PtResult extends Base{
         this.request(param);
       }
 
-    /*获取当前拼团的列表*/
-    doOrder(param,callback){
-        var that=this;
-        var allParams = { 
-          url: 'order',
-            type:'post',
-            data:{products:param},
-            sCallback: function (data) {
-                that.execSetStorageSync(true);
-                callback && callback(data);
-            },
-            eCallback:function(){
-                }
-            };
-        this.request(allParams);
-    }
 
-
+    payBack(id,callback){
+      var param = { 
+        url: 'ptuan/paybak',
+          type:'put',
+          data:{id:id},
+          sCallback: function (data) {
+              callback && callback(data);
+          }
+          };
+      this.request(param);
+  }
 
   
 

@@ -40,9 +40,8 @@
   display: flex;
   margin-bottom: 10rpx;
   width: 25%;
-  justify-content: center;
-  position: relative;
-  box-sizing: border-box;
+  flex-direction:column;
+  align-items:center;
 }
 /* .theme-item:first-child{
   border-right:4rpx solid #fff;
@@ -61,8 +60,9 @@
   font-size: 24rpx;
 }
 .theme-item image{
- height: 150rpx;
-  width: 90%;
+  height:120rpx;
+  width:120rpx;
+
 }
 .theme-icon{
   margin-top:10rpx;
@@ -89,7 +89,6 @@
 
 .case-item{
   width: 750rpx;
-  height:600rpx;
   border-bottom: 20rpx solid #f2f2f2;
   border-top: 20rpx solid #f2f2f2;
   overflow: hidden;
@@ -103,7 +102,7 @@
   text-align:center;
   height:90rpx;
   line-height:90rpx;
-  color:#333;
+  color:#AB956D;
   font-size:32rpx;
 }
 .ca-top image{
@@ -122,7 +121,12 @@ position:relative;
 
 }
 .cell image{
-  height:250rpx;
+float:right;
+height:260rpx;
+width:260rpx;
+margin-right:0;
+margin-top:40rpx;
+
 }
 .cell-img{
   position: relative;
@@ -249,4 +253,9 @@ z-index:999;
 
 .kanjia-list-info-money-a .b {
     color: #333;
+}
+.fen-t{
+  height:48rpx;
+  line-height:48rpx;
+  font-size: 30rpx; 
 }

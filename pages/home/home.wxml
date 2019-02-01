@@ -1,6 +1,6 @@
 <import src="../tpls/products/products-tpl.wxml"/>
 <view class="container home-container" hidden="{{!loadingHidden}}">
-    <swiper indicator-dots="true" autoplay="true" class="swiper">
+    <swiper indicator-dots="{{dots}}" indicator-color="{{color}}"  autoplay="true" class="swiper">
         <block wx:for="{{bannerArr}}" wx:for-item="bannerVo" wx:key="vo">
             <swiper-item class="banner-item" bindtap="onBannerItemTap" data-id="{{bannerVo.key_word}}">
                 <image class="item-image" src="{{bannerVo.img.url}}" mode="aspectFill" />
@@ -10,14 +10,18 @@
     <view class="home-main">
         <!--主题精选-->
         <view class="home-main-theme">
-            <view class="home-main-header">—YUEHUAPLASTIC—</view>
+            
             <view class="theme-box">
-                <block wx:for="{{themeArr}}" wx:for-item="theme" wx:key="vo">     
+                <block wx:for="{{themeArr}}" wx:for-item="theme" wx:key="vo">
+
 <view wx:if="{{theme.id !=3}}" class="theme-item" bindtap="onThemeAItemTap" data-id="{{theme.id}}" data-name="{{theme.name}}">
+
       <image src="{{theme.topic_img.url}}"></image>
+      <text>{{theme.name}}</text>
       </view>
 <button wx:else class="theme-item fen-q" open-type="contact" session-from="weapp">
       <image src="{{theme.topic_img.url}}"></image>
+       <text class='fen-t'>{{theme.name}}</text>
       </button>
              
 </block>
@@ -37,7 +41,7 @@
                 
                     <view class='cell no1' data-id="{{pt.id }}" bindtap='onGoodsItemTap'>
                         <view class='describe'>{{pt.name}}</view>
-                        <view class='cell-img'><image src='{{pt.top_img}}'></image>
+                        <view class='cell-img'><image src='https://rizhi.xayuehua.com/images/a123.png'></image>
                         <view class='cell-text'>{{pt.f_price}}起</view>     
                         </view> 
                     </view>

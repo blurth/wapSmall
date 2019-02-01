@@ -47,7 +47,9 @@
             <image src="{{ptlist.friend[0].user.avatar_url}}"></image>
             <view class="ptuan-user-info-box">
                 <view class="ptuan-user-name">
-                    <text>clear</text>
+
+                    <text>{{ptlist.friend[0].user.nickname}}</text>
+
                     <text>还差{{ptlist.ptnumber-ptlist.now_num}}人成团</text>
                 </view>
             </view>

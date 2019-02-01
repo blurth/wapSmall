@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    orderNav: ['全部', '待支付', '已支付', '退款'],
+    orderNav: ['全部', '待付款', '已支付', '已核销'],
     currenttabsIndex: 0,
     index: '',
     showOrderDetailInfo:'showOrderDetailInfo',

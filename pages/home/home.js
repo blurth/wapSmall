@@ -2,7 +2,10 @@ import { Home } from 'home-model.js';
 var home = new Home(); 
 Page({
     data: { 
-        loadingHidden: false
+      
+        loadingHidden: false,
+        color:'rgba(0, 0, 0, .3)',
+        dots:true
     },
     onLoad: function () {
         this._loadData();
@@ -99,9 +102,9 @@ Page({
           })
         } else if (id == 8) {
 
-          wx.navigateTo({
-            url: '../translate/translate'
-          })
+          // wx.navigateTo({
+          //   url: '../translate/translate'
+          // })
         }else{
           wx.navigateTo({
             url: '../theme/theme?id=' + id + '&name=' + name

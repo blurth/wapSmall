@@ -30,6 +30,8 @@
       还差
       <text>{{pingList.ptnumber-pingList.now_num}}</text>人成团，快来一起拼团吧～
     </view>
+
+
       <view class="pingtuan-info-times">
           <text class="lin-l"></text>剩余
       <text class="day" wx:if="{{countDownDay!=0}}">{{countDownDay}}</text>
@@ -41,6 +43,10 @@
           <text class="con">{{countDownSecond}}</text> 结束
       <text class="lin-r"></text>
       </view>
+
+
+
+      
   </view>
   <view class="vitery-ptuan-box" wx:if="{{!pingList}}">
       <view class="vitery-ptuan">好友已经拼团成功~</view>
@@ -73,7 +79,7 @@
               <image src="../../image/nav/home-on.png"></image>
               <text>去首页</text>
           </view>
-          <view bindtap="getshare" class="goPingtuan">邀请好友拼团</view>
+          <button open-type="share" class="goPingtuan">邀请好友拼团</button> 
       </view>
   </block>
 

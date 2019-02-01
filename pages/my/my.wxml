@@ -5,7 +5,6 @@
     <text class="name">{{userInfo.nickName}}</text>
   </view>
 
-
     <view class='my-menu-nav my-counts'>
     <view class='nav-ele my-all' bindtap='OnTapOrder' data-index='{{0}}'>
       <image src='/imgs/my/my-all.png' class='icon-all'></image>
@@ -13,7 +12,7 @@
     </view>
     <view class='nav-ele my-no-pay' bindtap='OnTapOrder' data-index='{{1}}'>
       <image src='/imgs/my/my-no-pay.png' class='icon-no-pay'></image>
-      <text>待支付</text>
+      <text>待付款</text>
     </view>
     <view class='nav-ele my-have-pay' bindtap='OnTapOrder' data-index='{{2}}'>
       <image src='/imgs/my/my-have-pay.png' class='icon-have-pay'></image>
@@ -21,7 +20,7 @@
     </view>
     <view class='nav-ele my-Refund' bindtap='OnTapOrder' data-index='{{3}}'>
       <image src='/imgs/my/my-Refund.png' class='icon-Refund'></image>
-      <text>退款订单</text>
+      <text>已核销</text>
     </view>
   </view>
 
@@ -42,7 +41,6 @@
         <image class='right-k' src="../../imgs/icon/arrow@right.png"></image></view>
       </view>
 
-
   <view class="item-title" ontap="editAddress">
      <view class='left-k'><image src="../../imgs/my/my-address.png"></image></view>          
       <view class='ziti'>
@@ -57,18 +55,9 @@
         <image class='right-k' src="../../imgs/icon/arrow@right.png"></image></view>
       </view>
 
-
-
-
   </view>
 
   
-
-
-
-
-  
-
 </view>
 
 <!-- 

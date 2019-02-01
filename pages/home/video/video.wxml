@@ -1,5 +1,0 @@
-<block wx:for="{{videoArr}}" >  
-   <view><video src='{{item.src}}'></video></view>
-
-
-</block>

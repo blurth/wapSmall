@@ -40,30 +40,24 @@ Page({
     });
 
     //获取: 全部案例
-    this._loadCasesAll();
-  },
-
-
-  //获取: 全部案例
-  _loadCasesAll: function () {
     category.getCasesListData((data) => {
 
       this.setData({
         diaryArr: data
       })
-    })
+    });
   },
 
 
   onTabsItemTap: function (event) {
+
     this.data.pageindex = 1;
-    var index = event.currentTarget.dataset.index;
+    var index = category.getDataSet(event, 'index');
     this.setData({
       currenttabsIndex: index
     })
 
     var id = category.getDataSet(event, 'id');
-
 
     category.getDiariesByCategory(id, (data) => {
       this.data.id = id;
@@ -118,8 +112,9 @@ Page({
         that.setData({
           diaryArr: Data
         })
+      }else{
+        
       }
-
 
     });
 
