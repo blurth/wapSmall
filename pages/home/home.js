@@ -2,9 +2,10 @@ import { Home } from 'home-model.js';
 var home = new Home(); 
 Page({
     data: { 
-      
+        noticehidden:false,
         loadingHidden: false,
         color:'rgba(0, 0, 0, .3)',
+        notice:'',
         dots:true
     },
     onLoad: function () {
@@ -19,6 +20,13 @@ Page({
                 bannerArr: data,
             });
         });
+
+      home.getNoticeData((data) => {
+        that.setData({
+          noticehidden:true,
+          notice: data.notice
+        });
+      });
 
         home.getThemeData((data) => {
             that.setData({

@@ -18,6 +18,16 @@ class Home extends Base{
         this.request(param);
     }
 
+    getNoticeData(callback) {
+      var param = {
+        url: 'notice/wx',
+        sCallback: function (data) {
+          callback && callback(data);
+        }
+      };
+      this.request(param);
+    }
+
     getThemeData(callback){
         var param={
           url: 'theme?ids=1,2,3,4,5,6,7,8',

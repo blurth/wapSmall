@@ -7,6 +7,11 @@
             </swiper-item>
         </block>
     </swiper>
+    <i-notice-bar wx:if="{{noticehidden}}" icon="systemprompt" loop>
+    {{notice}}
+    </i-notice-bar>
+
+
     <view class="home-main">
         <!--主题精选-->
         <view class="home-main-theme">

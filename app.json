@@ -32,7 +32,7 @@
   ],
   "window": {
     "navigationBarTitleText": "",
-    "navigationBarTextStyle": "#FFFFFF",
+    "navigationBarTextStyle": "white",
     "navigationBarBackgroundColor": "#69C3AA",
     "backgroundColor": "#FFFFFF",
     "backgroundTextStyle": "dark",

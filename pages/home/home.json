@@ -1,4 +1,8 @@
 {
-
+"usingComponents": {
+  "i-notice-bar": "../../dist/notice-bar/index"
+},
   "navigationBarTitleText": "西安悦华医疗美容"
+
 }
+
