@@ -28,12 +28,14 @@
     "pages/porder/porder",
     "pages/pt-result/pt-result",
     "pages/pintuan-list/pintuan-list",
-    "pages/gorder/gorder"
+    "pages/gorder/gorder",
+    "pages/coupon/coupon",
+    "pages/order/coupon/coupon"
   ],
   "window": {
     "navigationBarTitleText": "",
-    "navigationBarTextStyle": "white",
-    "navigationBarBackgroundColor": "#69C3AA",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffffff",
     "backgroundColor": "#FFFFFF",
     "backgroundTextStyle": "dark",
     "enablePullDownRefresh": true
@@ -83,5 +85,6 @@
     "uploadFile": 20000,
     "downloadFile": 20000
   },
-  "debug": true
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
 }

@@ -1,6 +1,6 @@
 <import src="../wxParse/wxParse.wxml"/>
 
-  <view class="container cart-container" hidden="{{!loadingHidden}}">
+  <view class="container diary-container" hidden="{{!loadingHidden}}">
 
       <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
 

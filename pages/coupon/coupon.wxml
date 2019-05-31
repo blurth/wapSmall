@@ -1,0 +1,27 @@
+<!--pages/coupon/coupon.wxml-->
+<!-- <i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="tab1" title="抵用券"></i-tab>
+    <i-tab key="tab2" title="赠品券"></i-tab>
+</i-tabs> -->
+
+
+<block wx:if="{{ticket}}">
+
+<block wx:for="{{ticket}}" wx:for-item="cou" wx:key="vo">
+
+
+  <i-card title="{{cou.coupon.name}}" extra="满{{cou.coupon.coupon_amount}}减{{cou.coupon.amount}}" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <view slot="content">有效期：{{cou.coupon.start_time}}-{{cou.coupon.end_time}}</view>
+    <view slot="footer">点击查看可用商品</view>
+  </i-card>
+  <view class='fenge'></view>
+</block>
+
+</block>
+
+
+<block wx:else>
+
+<i-load-more tip="暂无数据" loading="{{ false }}" />
+
+</block>

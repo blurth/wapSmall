@@ -36,3 +36,6 @@ border:0;
  position: absolute;
 }
 
+.diary-container{
+  
+}

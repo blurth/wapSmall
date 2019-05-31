@@ -1,7 +1,7 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": false,
 		"minified": true,
@@ -13,6 +13,8 @@
 	"appid": "wxe0155e2914a4ad6c",
 	"projectname": "dfgdf",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -30,7 +32,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 29,
+			"current": 30,
 			"list": [
 				{
 					"id": -1,
@@ -212,6 +214,12 @@
 					"name": "dfd",
 					"pathName": "pages/pt-result/pt-result",
 					"query": "id=9"
+				},
+				{
+					"id": -1,
+					"name": "优惠券",
+					"pathName": "pages/coupon/coupon",
+					"scene": null
 				}
 			]
 		}

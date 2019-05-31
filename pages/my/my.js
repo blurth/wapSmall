@@ -94,9 +94,8 @@ Page({
     })
   },
   onCoupons:function(){
-    wx.showModal({
-      title: '暂未开放',
-      content: '',
+    wx.navigateTo({
+      url: "/pages/coupon/coupon"
     })
   },
   onHuoTap: function () {

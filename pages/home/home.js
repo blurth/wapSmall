@@ -49,12 +49,6 @@ Page({
         });
 
 
-      // home.allCut((data) => {
-      //   that.setData({
-      //     cutArr: data
-      //   });
-      //   callback && callback();
-      // });
 
     },
     onBannerItemTap: function (event){
@@ -139,6 +133,9 @@ Page({
         url: '../pintuan-list/pintuan-list',
       })
     },
+  lingTicket: function () {
+    console.log('123');
+  },
     onShareAppMessage: function () {
         return {
             title: '西安悦华医疗美容',

@@ -1,8 +1,10 @@
 {
 "usingComponents": {
-  "i-notice-bar": "../../dist/notice-bar/index"
+  "i-notice-bar": "../../dist/notice-bar/index",
+  "i-button": "../../dist/button/index"
 },
-  "navigationBarTitleText": "西安悦华医疗美容"
+  "navigationBarTitleText": "西安悦华医疗美容",
+  "navigationBarBackgroundColor":"white"
 
 }
 

@@ -66,6 +66,10 @@
       </view>
     </block>
     </view>
+<!-- 优惠券 -->
+
+
+
 
   <!--结算-->
   <view class="footer-account-box order-accounts">
@@ -75,3 +79,5 @@
     <view wx:if="{{orderStatus<=1}}" class="pay {{!addressInfo?'disabled':''}}" ontap="pay">去付款</view>
   </view>
 </view>
+
+ <i-cell title="跳转到优惠券选择" is-link url="./coupon/coupon"></i-cell>

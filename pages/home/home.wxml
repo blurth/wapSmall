@@ -91,7 +91,11 @@
       <template is="products" data="{{diaryArr:diaryArr}}"/>
     </view>
     </view>
+
+
+
 </view>
+
 <loading hidden="{{loadingHidden}}">
     加载中...
 </loading>

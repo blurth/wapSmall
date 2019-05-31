@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "订单详情",
-  "enablePullDownRefresh":false
+  "enablePullDownRefresh":false,
+  "usingComponents": {
+    "i-cell": "../../dist/cell/index"
+}
 }

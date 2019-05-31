@@ -1,0 +1,5 @@
+/* pages/coupon/coupon.wxss */
+.fenge{
+  width: 100%;
+  height: 20rpx;
+}
